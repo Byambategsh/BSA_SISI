@@ -1,6 +1,25 @@
+[{
+    "courseId" : "ICSI202", 
+    "courseName" : "Өгөгдлийн бүтэц", 
+    "credit" : "3кр"
+},
 {
-    "courseId" : "ISCI202", 
-    "courseName" : "Хичээл", 
-    "credit" : "3"
-}
-
+    "courseId" : "ICSI304", 
+    "courseName" : "Програм хангамжийн зохиомж ба архитектур", 
+    "credit" : "3кр"
+},
+{
+    "courseId" : "ICSI403", 
+    "courseName" : "Програм хангамжийн чанар ба тестлэл", 
+    "credit" : "2кр"
+},
+{
+    "courseId" : "THES401", 
+    "courseName" : "Бакалаврын судалгааны ажил", 
+    "credit" : "3кр"
+},
+{
+    "courseId" : "JOUR421", 
+    "courseName" : "Олон нийтийн мэдээллийн хэрэгслийн реклам II", 
+    "credit" : "3кр"
+}]

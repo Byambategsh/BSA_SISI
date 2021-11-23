@@ -1,0 +1,45 @@
+[{
+    "courseId": "ICSI304",
+    "dugaar":"1",
+    "aName":"Time complexity",
+    "sumPoint":"10",
+    "getPoint":"?",
+    "startDate":"2021.10.10",
+    "dueDate":"2021.10.17"
+},
+{
+    "courseId": "ICSI304",
+    "dugaar":"2",
+    "aName":"Stack, queue, list",
+    "sumPoint":"10",
+    "getPoint":"?",
+    "startDate":"2021.10.17",
+    "dueDate":"2021.10.24"
+},
+{
+    "courseId": "ICSI304",
+    "dugaar":"3",
+    "aName":"Stack, queue, list",
+    "sumPoint":"10",
+    "getPoint":"?",
+    "startDate":"2021.10.17",
+    "dueDate":"2021.10.24"
+},
+{
+    "courseId": "ICSI403",
+    "dugaar":"4",
+    "aName":"Lab11",
+    "sumPoint":"10",
+    "getPoint":"?",
+    "startDate":"2021.10.17",
+    "dueDate":"2021.10.24"
+},
+{
+    "courseId": "ICSI202",
+    "dugaar":"5",
+    "aName":"Lab12",
+    "sumPoint":"10",
+    "getPoint":"?",
+    "startDate":"2021.10.24",
+    "dueDate":"2021.11.01"
+}]

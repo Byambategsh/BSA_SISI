@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Хичээлийн дэлгэрэнгүй</title>
+
+        <link rel="stylesheet"  href="css/style.css"/>
+        <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
+        <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
+        <style>
+            li{
+                display: inline-block;
+            }
+            li a{
+                text-decoration: none;
+            }
+            ul {
+                list-style: none; 
+                padding: 3vw;  
+                background-color: antiquewhite; 
+            }
+            ul li:not(:first-child){
+                padding-left: 5vw;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <a href="#">
+                <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
+            </a>
+            
+        </header>
+        <main>
+            <h5 class="pageTitle">Судалж буй хичээлүүд</h5>
+            <section class="subjectInfo">
+                <course-info courseId = "ICSI304"></course-info>                
+            </section>
+            <section class="middleTabs">
+                <!-- <sub-tabs></sub-tabs> -->        
+                <ul class="tabs">
+                    <li><a href="index.html"> Даалгавар </a></li>
+                    <li><a href=""> Ирц </a></li>
+                    <li><a href=""> Оноо </a></li>
+                </ul>  
+            </section>
+            <section class = "assignmentInfo">
+                <!-- <assignment-list></assignment-list> -->
+                <assignment-card dugaar = "1"></assignment-card>
+                <assignment-card dugaar = "2"></assignment-card>
+                <!-- <assignment-card courseId = "ICSI304"></assignment-card>
+                <assignment-card courseId = "ICSI304"></assignment-card> -->
+            </section>
+        </main>
+        
+        <footer>
+            <!-- <bottom-menu></bottom-menu> -->
+            <hr>
+            <div class="mainMenu">
+                <a href="index.html" class="menuLink activeMenu">
+                <i class="fa fa-home"></i>
+                </a>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-file"></i>
+                <i class="fa fa-book"></i>
+                <i class="fa fa-info"></i>
+            </div>
+        </footer>
+
+        <script src="components/subject.js" type="module"></script>
+        <script src="components/tabs.js" type="module"></script>
+        <script src="components/bottomMenu.js" type="module"></script>
+        <script src="components/courseInfo.js" type="module"></script>
+        <script src="components/subTabs.js" type="module"></script>
+        <script src="components/scheduleCard.js" type="module"></script>
+
+        <script src="components/assignmentCard.js" type="module"></script>
+        <script src="components/scheduleCard.js" type="module"></script>
+        <script src="components/scheduleCard.js" type="module"></script>
+    </body>
+</html>

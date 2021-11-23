@@ -1,37 +1,26 @@
 // <bottomMenu></bottomMenu>
+
 class BottomMenu extends HTMLElement {
   constructor() {
     super(); // always call super() first in the ctor.
     this.shadowMenu = this.attachShadow({
-        mode:"open"
+        mode:'open'
     });
   }
   connectedCallback() {
-    this.shadowMenu.innerHTML =`
-      <style>
-        .bMenu{
-          width: 100%;
-
-        }
-        img : hover{
-          pointer: cursor;
-          color:blue;
-          transform: scale(1.1);
-        }
-      </style>
-      <div class="bMenu">
-        // <ul class="bottomMenu">
-        //       <li><a href="#" class=""></a>
-        //       <img src="https://img.icons8.com/fluency-systems-regular/24/000000/star--v1.png"/>
-        //       </li>
-        //       <li><a href="#" class="fa fa-facebook"></a></li>
-        //       <li><a href="#" class=""></a></li>
-        //       <li><a href="#" class=""></a></li>
-        //       <li><a href="#" class=""></a></li>
-        // </ul>
+    this.shadowMenu.innerHTML = `
       
-      </div>
-      <script src="CSS/js/uikit-icons.min.js"></script>
+
+      // <article class="mainMenu">
+      //       <a href="index.html" class="menuLink activeMenu">
+      //          <i class="fa fa-home"></i>
+      //       </a>
+      //       <i class="fa fa-star"></i>
+      //       <i class="fa fa-file"></i>
+      //       <i class="fa fa-book"></i>
+      //       <i class="fa fa-info"></i>
+      //    </article>
+      <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
     `;
   }
   disconnectedCallback() {

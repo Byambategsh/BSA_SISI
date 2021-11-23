@@ -2,11 +2,88 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SISi</title>
+    <title>МУИС~SISi</title>
+
+    <link rel="stylesheet"  href="css/style.css"/>
+    <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <style>
+       .card{
+          border: 1px solid gray;
+       }
+       .p{
+         display: inline;
+       }
+       .assignName{
+          overflow: hidden;
+       }
+    </style>
+      
 </head>
 <body>
-    
+   <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
+        <header>
+         <a href="#">
+           <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
+         </a>
+     </header>
+     <!-- Үндсэн хэсэг -->
+     <main>
+
+        <section class="calendar">
+         
+            
+        </section>
+
+        <section class="subjectList">
+
+            <home-tabs></home-tabs>
+            <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
+            <sem-subject courseId = "ICSI304"></sem-subject>
+            <sem-subject courseId = "ICSI403"></sem-subject>
+            <sem-subject courseId = "THES401"></sem-subject>
+            <sem-subject courseId = "JOUR421"></sem-subject>
+
+            
+            <!-- <script>
+                for(let i=0; i < 5; i++){
+                    <sem-subject ></sem-subject>
+               }
+            </script> -->
+        </section>
+     </main>
+     <!-- Үндсэн цэс -->
+     <footer>
+        <!-- <bottom-menu></bottom-menu> -->
+        <hr>
+         <div class="mainMenu">
+            <a href="index.html" class="menuLink activeMenu">
+               <i class="fa fa-home "></i>
+            </a>
+            <!-- <i class="fa fa-star uk-width-1-5"></i>
+            <i class="fa fa-book uk-width-1-5"></i>
+            <i class="fa fa-file uk-width-1-5"></i>
+            <i class="fa fa-info uk-width-1-5"></i> -->
+            <i class="far fa-star ">
+               <!-- <img id="logo", src="Images/TaChi.svg"> -->
+            </i>
+            <i class="fas fa-tasks "></i>
+            <i class="far fa-file "></i>
+            <i class="fas fa-question"></i>
+            <span class="lnr lnr-star"></span>
+         </div>
+      </footer>
+
+     <script src="components/subject.js" type="module"></script>
+     <script src="components/tabs.js" type="module"></script>
+     <script src="components/bottomMenu.js" type="module"></script>
+     <script src="components/courseInfo.js" type="module"></script>
+     <script src="components/subTabs.js" type="module"></script>
+     <script src="components/scheduleCard.js" type="module"></script>
+
+     <script src="components/assignmentCard.js" type="module"></script>
+     <script src="components/scheduleCard.js" type="module"></script>
+     <script src="components/scheduleCard.js" type="module"></script>
 </body>
 </html>

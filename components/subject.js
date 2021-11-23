@@ -4,26 +4,26 @@
 class Subject extends HTMLElement{
     constructor(){
         super();
-
-        // this.innerHTML=`
-        // <style>
-
-        // </style>
-        // <h3>Hello world</h3>
-        // `;
         
         this.shadow = this.attachShadow({
             mode:"open"
         });
+
         this.courseId = this.getAttribute("courseId");
         this.courseName = this.getAttribute("courseName");
+        console.log(this.courseId);
         this.badge = this.getAttribute("badge");
     }
     connectedCallback(){
         fetch("http://127.0.0.1:5500/data/courses.json").then(response => response.json())
             .then(data => {
-                this.courseId = data.courseId;
-                this.courseName = data.courseName;
+                // this.courseId = data.courseId;
+                // this.courseName = data.courseName;
+
+                // console.log(data[0].courseId);
+                
+                const result = data.filter(subj => subj.courseId == this.courseId);
+
 
                 /*const mySubject = JSON.parse(numSubjects);
 
@@ -33,7 +33,7 @@ class Subject extends HTMLElement{
                }*/
                 
                 //badge
-   
+            if(result.length == 1){
             this.shadow.innerHTML = `
                 <style>
                     .subject_card {
@@ -51,22 +51,25 @@ class Subject extends HTMLElement{
                         background-color: #C0392B;
                         border-radius: 50%;
                     }     
-                    hr{
-                        border-top: 0.1px #E7E7F6;+
-                    }
+                   
                     p{
                         //font-family: exo;
                         //font-size: 16px;
                         margin: 1vh;
+                        padding-top:5%;
+                    }
+                    a{
+                        text-decoration: none;
                     }
                 </style>
                 
                 <article class = "subject_card">
-                <hr>
+                    <hr>
                     <div class="circle_badge">${this.badge}</div>
-                    <p><b>${this.courseId}</b> | ${this.courseName}</p>
+                    <a href="subjectDetail.html" class="link"><p><b>${this.courseId}</b> | ${result[0].courseName}</p></a>
                 </article>
             `;
+        }
         });
     }
 }

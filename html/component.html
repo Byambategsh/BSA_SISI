@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule</title>
+    <!-- <link rel="stylesheet"  href="../css/style.css"/> -->
+    <style>
+        /* *{
+            box-sizing: border-box;
+        } */
+        body{
+            display: flex;
+            flex-direction: column;
+            overflow: auto;
+        }
+        #subjectSchedule{
+            padding: 1vw;
+            /* display: flex;
+            flex-direction: row; */
+            display: inline;
+        }
+        table, th, td {
+            border-left: 1px dotted #E7E7F6;
+            font-size: 0.9em;
+            height: 3vh;
+        }
+        
+        .middle-start{
+            float: right;
+        }
+        table {
+            width: 75px;
+            /* width: 20%; */
+            /* border-collapse: collapse; */
+        }
+        .attention{
+            width: 100%;
+            text-align: center;
+            border: 1px dotted #c9c9db;
+            text-align: center;
+        }
+        .attention td{
+            width: 25%;
+        }
+        .scheduleTime{
+            float: left;
+            /* display: sticky; */
+        }
+        .days{
+            width: 70%;
+            float: right;
+        }
+
+        /* Days */
+        .daysList{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+        .daysBorder{
+            border: 1px solid gray;
+            border-radius: 50%;
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="subjectList">
+        <p>Хичээлийн жагсаалт</p>
+        <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
+        <!-- <sem-subject courseId = "ICSI304"></sem-subject>
+        <sem-subject courseId = "ICSI403"></sem-subject>
+        <sem-subject courseId = "THES401"></sem-subject>
+        <sem-subject courseId = "JOUR421"></sem-subject> -->
+    </section>
+    
+    <p>Хичээлийн хуваарь</p>
+    <section>
+        <article class="days">
+            <div class="daysList">
+                <!-- tab group -->
+                <div class="daysBorder">
+                    <a href="#mon" slot="tabs">Да</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#tue" slot="tabs">Мя</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#wed" slot="tabs">Лх</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#thu" slot="tabs">Пү</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#fri" slot="tabs">Ба</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#sat" slot="tabs">Бя</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#sun" slot="tabs">Ня</a>
+                </div>
+            </div>                
+    
+            <div slot="tabContent" id="mon">
+                
+            </div>
+            <div slot="tabContent" id="tue">
+                
+            </div>
+            <div slot="tabContent" id="wed">
+                
+            </div>
+            <div slot="tabContent" id="the">
+                
+            </div>
+            <div slot="tabContent" id="fri">
+                
+            </div>
+            <div slot="tabContent" id="sat">
+                
+            </div>
+            <div slot="tabContent" id="sun">
+                
+            </div>
+            <!-- definition slot | tab group-->
+            <div class="tabs" role="tablist">
+                <slot id="tab-slot" name="tabs"></slot>
+            </div>
+            <div class="tabContent">
+                <slot id="tabContent-slot" name="tabContent"></slot>
+            </div>
+        </article>
+    </section>
+    <section id="subjectSchedule">
+        <!-- <article class="days">
+            <div class="daysList">
+                
+                <div class="daysBorder">
+                    <a href="#mon" slot="tabs">Да</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#tue" slot="tabs">Мя</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#wed" slot="tabs">Лх</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#thu" slot="tabs">Пү</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#fri" slot="tabs">Ба</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#sat" slot="tabs">Бя</a>
+                </div>
+                <div class="daysBorder">
+                    <a href="#sun" slot="tabs">Ня</a>
+                </div>
+            </div>                
+    
+            <div slot="tabContent" id="mon">
+                
+            </div>
+            <div slot="tabContent" id="tue">
+                
+            </div>
+            <div slot="tabContent" id="wed">
+                
+            </div>
+            <div slot="tabContent" id="the">
+                
+            </div>
+            <div slot="tabContent" id="fri">
+                
+            </div>
+            <div slot="tabContent" id="sat">
+                
+            </div>
+            <div slot="tabContent" id="sun">
+                
+            </div>
+            
+            <div class="tabs" role="tablist">
+                <slot id="tab-slot" name="tabs"></slot>
+            </div>
+            <div class="tabContent">
+                <slot id="tabContent-slot" name="tabContent"></slot>
+            </div>
+        </article> -->
+        <article class="scheduleTime">
+            <table>
+                <!-- <tr>
+                  <th class="col1">Time</th>
+                  <th class="col2">Days</th
+                </tr> -->
+                <tr class="start">
+                  <td><b>7:40</b></td>
+                  <!-- <td><schedule-card></schedule-card></td> -->
+                </tr>
+                <tr class="middle-start">
+                    <td>8:25</td>
+                    
+                </tr>
+                <tr class="start">
+                  <td><b>9:20</td>
+                  <!-- <td></td> -->
+                </tr>
+                <tr class="middle-start">
+                    <td>10:05</td>                   
+                </tr>
+                <tr class="start">
+                    <td><b>11:00</td>
+                    <!-- <td></td> -->
+                </tr>
+                <tr class="middle-start">
+                    <td>11:45</td>                  
+                </tr>
+                <tr class="start">
+                    <td><b>12:40</td>                   
+                </tr>
+                <tr class="middle-start">
+                    <td>13:25</td>
+                </tr>
+                <tr class="start">
+                    <td><b>14:20</td>                    
+                </tr>
+                <tr class="middle-start">
+                    <td>15:05</td>                  
+                </tr>
+                <tr class="start">
+                    <td><b>16:00</td>                   
+                </tr>
+                <tr class="middle-start">
+                    <td>16:45</td>                  
+                </tr>
+                <tr class="start">
+                    <td>1<b>7:40</td>                   
+                </tr>
+                <tr class="middle-start">
+                    <td>18:25</td>                    
+                </tr>
+                <tr>
+                    <td><b>19:20</td>   
+                </tr>
+                <tr class="middle-start">
+                    <td>20:05</td>                    
+                </tr>
+            </table>
+        </article>
+        <article class="days">
+            <tr>
+                <th class="days"></th>
+                <days-tab></days-tab>
+              </tr>
+            
+            <schedule-card></schedule-card>
+        </article>
+    </section>
+
+    <section id="assignmentList">
+        <p>Даалгаврын мэдээлэл</p>
+        <assignment-card dugaar = "1"></assignment-card>
+    </section>
+    <section id="attentionList">
+        <p>Ирцийн мэдээлэл</p>
+        <table class="attention">
+            <tr>
+              <th colspan="2">Лекц</th>
+              <a href="https://icons8.com/icon/104/star"></a>
+              <th colspan="2">Семинар</th>
+              
+            </tr>
+            <tr>
+              <td>Lec1</td>
+              <td><i>i</i></td>
+              <td>Sem1</td>
+              <td><i>i</i></td>
+            </tr>
+            <tr>
+              <td>Lec2</td>
+              <td><i>i</i></td>
+              <td>Sem2</td>
+              <td><i>i</i></td>
+            </tr>
+          </table>
+    </section>
+    <!-- Slot  -->
+    <section >
+
+        <ul class="tabs">
+            <li><a href="#subject" slot=tabs> Хичээл </a></li>
+            <li><a href="#schedule" slot=tabs> Хуваарь </a></li>
+        </ul>  
+        
+        <div>
+            <!-- tab group -->
+            <a href="#tabpanel1-1" slot="tabs">Hicheel</a>
+            <a href="#tabpanel1-2" slot="tabs">Huvaari</a>
+            
+
+            <div slot="tabpanel" id="subject">
+                Contents of tabpanel 1-1 <button type="button">Button</button>
+            </div>
+            <div slot="tabpanel" id="schedule">
+                Contents of tabpanel 1-2 <button type="button">Button</button>
+            </div>
+        </div>
+        <!-- definition slot | tab group-->
+            <div class="tabs" role="tablist">
+                <slot id="tab-slot" name="tabs"></slot>
+            </div>
+            <div class="tabContent">
+                <slot id="tabContent-slot" name="tabContent"></slot>
+            </div>
+            <!-- <div id="tablist" class="tablist" role="tablist">
+                <slot id="tab-slot" name="tab"></slot>
+            </div>
+            <div class="tabpanels">
+                <slot id="tabpanel-slot" name="tabpanel"></slot>
+            </div> -->
+            
+    </section>
+
+    <script src="..\components/subject.js" type="module"></script>
+    <script src="..\components/scheduleCard.js" type="module"></script>
+    <script src="..\components/assignmentCard.js" type="module"></script>
+</body>
+</html>
+
+
+

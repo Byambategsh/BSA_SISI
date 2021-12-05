@@ -40,7 +40,7 @@ class ScheduleCard extends HTMLElement {
                   
             </article>
         `;
-  });
+      });
   }
   disconnectedCallback() {
     

@@ -34,38 +34,62 @@ class AssignmentCard extends HTMLElement {
         this.shadowAssignment.innerHTML = `
             <style>
               .card{
+                display: inline-grid;
+                grid-template-columns: repeat(3, 1fr);
                 width: 100%;
                 height: auto;
-                margin: 0.5vh;
+                margin-top: 1vh;
+                grid-auto-rows: 5vh; 
+                grid-column-gap: 1vw;
+                grid-row-gap: 1vw;
                 border-radius: 16px 16px 0 16px;
-                display: inline-block;
+                
                 // border: 1px solid gray;
+
                 background-color: #ffffff;
                 // backdrop-filter: blur(12px);
                 // -webkit-backdrop-filter: blur(12px);
-                padding-left: 10px;
-                padding-right: 10px;
+              }             
+            
+              .subjName{
+                  grid-column: 1/4;
+                  grid-row: 1;
+                  overflowX: 
+                  vertical-align: text-top;
               }
-              .lt{
-                  float: left;
+              .subjPoint{
+                grid-column: 2;
+                grid-row: 2;
+                text-align: center;
               }
-              p{
-                  text-align: center;
+              .initDate{
+                grid-column: 1;
+                grid-row: 3;
+
               }
-              /* .clr{
-                  clear: both;
-              } */
-              .rt{
-                  float: right;  
+              .dueDate{
+                grid-column: 3;
+                grid-row: 3;
+                text-align: right;
               }
+
+              // .lt{
+              //     float: left;
+              // }
+              // p{
+              //     text-align: center;
+              // }
+              
+              // .rt{
+              //     float: right;  
+              // }
             </style>
             <article class="card">
-              <h4 class="">${result[0].dugaar}. ${result[0].aName}<a href="">...</a></h4>
+              <h4 class="subjName">${result[0].dugaar}. ${result[0].aName}<a href="">...</a></h4>
                 
-              <p class=""><b>${result[0].getPoint} / ${result[0].sumPoint}</b></p>
-              <!-- <div class="cl"></div> -->
-              <p class = "lt"> ${result[0].startDate} </p> 
-              <p class = "rt"> ${result[0].dueDate} </p>
+              <p class="subjPoint"><b>${result[0].getPoint} / ${result[0].sumPoint}</b></p>
+              <p class = "initDate"> ${result[0].startDate} </p> 
+              <p class = "dueDate"> ${result[0].dueDate} </p>
             </article> 
           `;
           }

@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Хичээлийн дэлгэрэнгүй</title>
 
+        <link href="/open-iconic/font/css/open-iconic-foundation.css" rel="stylesheet">
         <link rel="stylesheet"  href="css/style.css"/>
         <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
         <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
         <style>
-            li{
+            /* li{
                 display: inline-block;
             }
             li a{
@@ -22,15 +23,15 @@
             }
             ul li:not(:first-child){
                 padding-left: 5vw;
-            }
+            } */
         </style>
     </head>
     <body>
         <header>
+            <img src="Iconography/Back.png" alt="back">
             <a href="#">
                 <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
-            </a>
-            
+            </a>    
         </header>
         <main>
             <section class="staticSection">
@@ -38,19 +39,14 @@
                 <article class="subjectInfo">
                     <course-info courseId = "ICSI304"></course-info>                
                 </article>
-                <article class="middleTabs">
-                        <!-- <sub-tabs></sub-tabs> -->        
-                        <!-- <ul class="tabs">
-                            <li><a for=""> Даалгавар </a></li>
-                            <li><a href=""> Ирц </a></li>
-                            <li><a href=""> Оноо </a></li>
-                        </ul>   -->
+                
+            </section>
+            <section class="dynamicSection">
+                <!-- <article class="middleTabs"> -->
                     <label for="assignment" class="tabs">Даалгавар</label>
                     <label for="attendance" class="tabs">Ирц</label>
                     <label for="points" class="tabs">Оноо</label>
-                </article>
-            </section>
-            <section class="dynamicSection">
+                <!-- </article> -->
                 <div class="tab-contents">
                     <!-- tab1 -->
                     <input type="radio" value="a1" id="assignment" name="a" class="tab">
@@ -87,17 +83,8 @@
         </main>
         
         <footer>
-            <!-- <bottom-menu></bottom-menu> -->
-            <hr>
-            <div class="mainMenu">
-                <a href="index.html" class="menuLink activeMenu">
-                <i class="fa fa-home"></i>
-                </a>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-file"></i>
-                <i class="fa fa-book"></i>
-                <i class="fa fa-info"></i>
-            </div>
+            <bottom-menu></bottom-menu>
+            
         </footer>
 
         <script src="components/subject.js" type="module"></script>

@@ -56,24 +56,28 @@ class CourseInfo extends HTMLElement {
             }   
             .icons{
 
+            }       
+            div > img{
+                border: 1px solid gray;
+                border-radius: 50%;
+                padding: 2vw;
             }
-
-            //   p{
-            //       display: inline;
-            //   }
-            //   .pl{
-            //       float: left;
-            //   }
-            //   .pr{
+              p{
+                //       display: inline;
+                //   }
+                //   .pl{
+                //       float: left;
+                //   }
+                //   .pr{
+                    
+                //     float: right;
+                //   }  
+                //   .pc{
+                //       width: 70%;
+                //       text-align: center;
+                //   }    
                 
-            //     float: right;
-            //   }  
-            //   .pc{
-            //       width: 70%;
-            //       text-align: center;
-            //   }             
-            
-              .pageTitle{
+            .pageTitle{
                 text-align: center;
                 margin: auto;
               }
@@ -94,17 +98,17 @@ class CourseInfo extends HTMLElement {
             </div>
           <hr>
             <div class = "subjMenu uk-grid" class="icons">
-                <div class="uk-width-1-4">
-                    
+                <div class="uk-width-1-4" class="icon">
+                    <img src="Iconography/info.svg"  alt="teams icon" class="icon"> 
                 </div>
                 <div class="uk-width-1-4">
-                    <img src="Iconography/schedule.png"  alt="teams icon">
+                    <img src="Iconography/subjSchedule.svg"  alt="teams icon" class="icon">
                 </div>
                 <div class="uk-width-1-4">
-                    <img src="Iconography/schedule.svg" alt="teams icon">
+                    <img src="Iconography/poll.svg" alt="teams icon" fill: blue; class="icon">
                 </div>
                 <div class="uk-width-1-4">
-                    <img src="Iconography/Microsoft_Teams-Logo.wine 1.png" alt="teams icon">
+                    <img src="Iconography/Microsoft_Teams-Logo.wine 1.png" alt="teams icon" class="icon">
                 </div>
             </div>
         </article>

@@ -14,16 +14,17 @@ class TimeList extends HTMLElement {
               border-top: 1px dotted #E7E7F6;
               font-size: 0.9em;
               height: 3vh;
+              margin-left: 2vw;
           }
           
           .middle-start{
               float: right;
           }
           table{
-            width: 40%;
+            width: 22vw;
           }
     </style>
-    <article class="scheduleTime">
+    
     <table>
         <!-- <tr>
           <th class="col1">Time</th>
@@ -82,7 +83,7 @@ class TimeList extends HTMLElement {
             <td>20:05</td>                    
         </tr>
     </table>
-</article>
+
     `;
   }
   disconnectedCallback() {

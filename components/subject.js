@@ -57,7 +57,7 @@ class Subject extends HTMLElement{
                         // font-family: 'M PLUS Rounded 1c', sans-serif;
                         font-family: 'Nunito', sans-serif;
                         // font-family: 'Exo 2', sans-serif;
-                        font-size: 1em;
+                        font-size: 0.9em;
                         margin: 1vh;
                         padding-top:5%;
                         color:  #000033

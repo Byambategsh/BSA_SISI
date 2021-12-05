@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
     
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+    <link href="/open-iconic/font/css/open-iconic-foundation.css" rel="stylesheet">
 
     <!-- Rounded corner font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,21 +60,22 @@
 <body>
    <script src="iconic.min.js"></script>
    <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
-        <header>
-         <a href="#">
-           <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
-         </a>
-         <i class="far fa-bell notif"></i>
-     </header>
-     <!-- Үндсэн хэсэг -->
-     <main>
+   <header>
+      <a href="#">
+         <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
+      </a>
+      <img src="Iconography/bell.png"  alt="teams icon" class="icon"> 
+   </header>
 
+     <!-- Main content -->
+   <main>
         <section class="calendar">
             <bottom-menu></bottom-menu>
-            <img src="/open-iconic/svg/info.svg">
+            <span class="fi-icon-name" title="icon name" aria-hidden="true"></span>
+            
         </section>
 
-        <section class="subjectList">
+        <section class="SnS">
 
             <!-- <home-tabs></home-tabs>
             <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
@@ -86,7 +88,8 @@
             <label for="schedule" class="tabs">Хуваарь</label>
 
             <div class="tab-contents">
-               <!-- tab1 -->
+
+               <!-- subject tab -->
                <input type="radio" value="a1" id="subject" name="a" class="tab">
                <!-- <div class="tab-content">tab1 content</div> -->
                <article slot="tab-content" id="subject" class="tab-content">
@@ -97,18 +100,27 @@
                   <sem-subject courseId = "JOUR421"></sem-subject>        
                </article>
 
-               <!-- tab2 -->
+               <!-- schedule tab -->
                <input type="radio" value="a2" id="schedule" name="a" class="tab">
                <!-- <div class="tab-content">tab2 content</div> -->
                <article slot="tab-content" id="schedule" class="tab-content">
-                  <days-tab></days-tab>   
-                  <time-list></time-list>
-                     
+                     <days-tab></days-tab>   
+                     <div class="perDay">
+                        <!-- <time-list ></time-list> -->
+                        <!-- <div class="daySchedules">
+                           <time-list ></time-list>
+                           <schedule-card class="card1"></schedule-card>
+                           <schedule-card class="card2"></schedule-card>
+                           <schedule-card class="card3"></schedule-card>
+                        </div>  -->
+                     </div>
                </article>
             </div>
         </section>
      </main>
-     <!-- Үндсэн цэс -->
+
+
+     <!-- Bottom Menu -->
      <footer>
         <!-- <bottom-menu></bottom-menu> -->
         <hr>

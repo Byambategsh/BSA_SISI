@@ -11,14 +11,14 @@ class BottomMenu extends HTMLElement {
     this.shadowMenu.innerHTML = `
     
         <style>
+        
             .mainMenu{
               width: 100%;
               height: 56px;
               display: inline-grid;
-              grid-template-columns: repeat(5, 1fr);
-              
+              grid-template-columns: repeat(5, 1fr);    
               grid-column-gap: 2vw;
-              background-color: white; // #F1F2F7;
+              background-color: #F1F2F7;
               border-radius: 2vw;
             }
             
@@ -69,8 +69,12 @@ class BottomMenu extends HTMLElement {
               grid-column: 5;
               grid-row: 1;
             }
-
-            
+            .icon{
+              filter: gray;
+            }
+            .icon:hover{
+              filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+            }
             //  menu hoorondiin zai 
 
             // .mainMenu i:not(:first-child){ 
@@ -83,31 +87,31 @@ class BottomMenu extends HTMLElement {
             // }
 
         </style>
-        <script src="iconic.min.js"></script>
+               
          <div class="mainMenu">
             <i class="home" class="menu1">
               <a href="index.html">
-                <img src="Iconography/home_icon.svg" alt="home icon">
+                <img src="Iconography/home.png" alt="teams icon" class="icon">
               </a>
             </i>
-            <i class="grade" class="menu2">
+            <i class="far fa-star" class="menu2">
               <a href="#">
-                <img src="Iconography/star_roundedCorner.svg" alt="home icon">
+                <img src="Iconography/star_roundedCorner.svg" alt="teams icon" class="icon">
               </a>
             </i>
-            <i class="program" class="menu3">
+            <i class="fas fa-tasks" class="menu3">
               <a href="#">
-              <img class="iconic iconic-lg" src="code.svg">
+                <img src="Iconography/program.svg" alt="teams icon" class="icon">
               </a>
             </i>
-            <i class="file">
-              <a href="#" class="menu4">
-                <img src="Iconography/home.svg" alt="home icon">
+            <i class="far fa-file" class="menu4">
+              <a href="#" >
+                <img src="Iconography/File.svg" alt=" icon" class="icon">
               </a>
             </i>
             <i class="help" class="menu5">
               <a href="#">
-                <img src="Iconography/home_icon.svg" alt="home icon">
+                <img src="Iconography/option.png" alt="teams icon" class="icon">
               </a>
             </i>         
          </div>

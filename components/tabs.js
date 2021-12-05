@@ -1,11 +1,23 @@
-//import html from "./utils.js";
+// import './subject';
+// import './daysTab';
+// import './assignmentCard';
+// import './timeList';
 
 class SubjectSchedule extends HTMLElement{
     constructor(){
         super();
+
+        // let template = document.getElementById('home-tabs');
+        // let templateContent = template.content;
+
+        // const shadowRoot = this.attachShadow({mode: 'open'})
+        //     .appendChild(templateContent.cloneNode(true));
+
         this.shadowTabs = this.attachShadow({
             mode:"open"
         });
+    }
+    connectedCallback(){
         this.shadowTabs.innerHTML = `
         <style>
             ul {
@@ -20,6 +32,7 @@ class SubjectSchedule extends HTMLElement{
                 display: inline-block;
                 text-decoration: none;
                 //padding-left: 5vw;
+                color: #737373;
             }
             .huvaariTab{
                 padding-left: 6vw;
@@ -32,35 +45,25 @@ class SubjectSchedule extends HTMLElement{
 			.contents ::slotted([aria-hidden="true"]) {
 				display: none;
 			}
+
+            .tabs li a:hover{
+                transform: scale(1.1);
+                color:  #000099;
+              }
+              
+             .tabs li a:hover::after{
+                color: #5f0ef7;
+             }
         </style>
         
         <ul class="tabs">
-            <li><a href="#tabpanel1-1" slot=tab> Хичээл </a></li>
+            <li><a href="#subject" slot=tab> Хичээл </a></li>
             <li class="huvaariTab"><a href="#schedule" slot=tab> Хуваарь </a></li>
         </ul>  
-    
-     
-    <x-tab>
-        <a href="#tabpanel1-1" slot="tab">Tab 1-1</a>
-        <a href="#tabpanel1-2" slot="tab">Tab 1-2</a>
-        <a href="#tabpanel1-3" slot="tab">Tab 1-3</a>
-        <div slot="tabpanel" id="tabpanel1-1">
-          Contents of tabpanel 1-1 <button type="button">Button</button>
-        </div>
-        <div slot="tabpanel" id="tabpanel1-2">
-          Contents of tabpanel 1-2 <button type="button">Button</button>
-        </div>
-        <div slot="tabpanel" id="tabpanel1-3">
-          Contents of tabpanel 1-3 <button type="button">Button</button>
-        </div>
-    </x-tab>
 
-            <div id="tablist" class="tablist" role="tablist">
-				<slot id="tab-slot" name="tab"></slot>
-			</div>
-			<div class="tabpanels">
-				<slot id="tabpanel-slot" name="tabpanel"></slot>
-			</div>
+        <section>
+             
+        </section>
       `;
     }
 }

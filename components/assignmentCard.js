@@ -35,12 +35,16 @@ class AssignmentCard extends HTMLElement {
             <style>
               .card{
                 width: 100%;
-                height: 150px;
-                border: 1px solid gray;
-                border-radius: 16px;
+                height: auto;
+                margin: 0.5vh;
+                border-radius: 16px 16px 0 16px;
                 display: inline-block;
-                background-color: #fff;
-                // padding: 2vw;
+                // border: 1px solid gray;
+                background-color: #ffffff;
+                // backdrop-filter: blur(12px);
+                // -webkit-backdrop-filter: blur(12px);
+                padding-left: 10px;
+                padding-right: 10px;
               }
               .lt{
                   float: left;

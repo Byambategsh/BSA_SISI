@@ -5,9 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МУИС~SISi</title>
 
+    <!-- CSS file and frameworks -->
     <link rel="stylesheet"  href="css/style.css"/>
+
     <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
+
+    <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- Font style-->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Rounded corner font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <style>
        .card{
           border: 1px solid gray;
@@ -18,39 +32,80 @@
        .assignName{
           overflow: hidden;
        }
+       .mainMenu{
+          color: gray;
+       }
+       .mainMenu i:hover{
+         transform: scale(1.3);
+         color:  #000099;
+       }
+       
+      .mainMenu i:hover::after{
+         transform: scaleY(1.1);
+         opacity: 1;
+         content: " ";
+         margin-left: 2vw;
+         display: block;
+         width: 1vw;
+         height: 1vw;
+         border-radius: 1vw;
+         background-color:#5f0ef7;
+         background-position: center;  
+      }
+
     </style>
       
 </head>
 <body>
+   <script src="iconic.min.js"></script>
    <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
         <header>
          <a href="#">
            <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
          </a>
+         <i class="far fa-bell notif"></i>
      </header>
      <!-- Үндсэн хэсэг -->
      <main>
 
         <section class="calendar">
-         
-            
+            <bottom-menu></bottom-menu>
+            <img src="/open-iconic/svg/info.svg">
         </section>
 
         <section class="subjectList">
 
-            <home-tabs></home-tabs>
+            <!-- <home-tabs></home-tabs>
             <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
             <sem-subject courseId = "ICSI304"></sem-subject>
             <sem-subject courseId = "ICSI403"></sem-subject>
             <sem-subject courseId = "THES401"></sem-subject>
-            <sem-subject courseId = "JOUR421"></sem-subject>
-
+            <sem-subject courseId = "JOUR421"></sem-subject> -->
             
-            <!-- <script>
-                for(let i=0; i < 5; i++){
-                    <sem-subject ></sem-subject>
-               }
-            </script> -->
+            <label for="subject" class="tabs">Хичээл</label>
+            <label for="schedule" class="tabs">Хуваарь</label>
+
+            <div class="tab-contents">
+               <!-- tab1 -->
+               <input type="radio" value="a1" id="subject" name="a" class="tab">
+               <!-- <div class="tab-content">tab1 content</div> -->
+               <article slot="tab-content" id="subject" class="tab-content">
+                  <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
+                  <sem-subject courseId = "ICSI304"></sem-subject>
+                  <sem-subject courseId = "ICSI403"></sem-subject>
+                  <sem-subject courseId = "THES401"></sem-subject>
+                  <sem-subject courseId = "JOUR421"></sem-subject>        
+               </article>
+
+               <!-- tab2 -->
+               <input type="radio" value="a2" id="schedule" name="a" class="tab">
+               <!-- <div class="tab-content">tab2 content</div> -->
+               <article slot="tab-content" id="schedule" class="tab-content">
+                  <days-tab></days-tab>   
+                  <time-list></time-list>
+                     
+               </article>
+            </div>
         </section>
      </main>
      <!-- Үндсэн цэс -->
@@ -58,23 +113,17 @@
         <!-- <bottom-menu></bottom-menu> -->
         <hr>
          <div class="mainMenu">
-            <a href="index.html" class="menuLink activeMenu">
-               <i class="fa fa-home "></i>
-            </a>
-            <!-- <i class="fa fa-star uk-width-1-5"></i>
-            <i class="fa fa-book uk-width-1-5"></i>
-            <i class="fa fa-file uk-width-1-5"></i>
-            <i class="fa fa-info uk-width-1-5"></i> -->
+            <!-- <img src="Iconography/home_icon.svg" alt="home icon"> -->
+            <i class="fa fa-home "><a href="index.html" class="menuLink activeMenu"></a></i>
             <i class="far fa-star ">
-               <!-- <img id="logo", src="Images/TaChi.svg"> -->
             </i>
             <i class="fas fa-tasks "></i>
             <i class="far fa-file "></i>
-            <i class="fas fa-question"></i>
-            <span class="lnr lnr-star"></span>
+            <i class="fas fa-question"></i>         
          </div>
       </footer>
 
+      <!-- import web components -->
      <script src="components/subject.js" type="module"></script>
      <script src="components/tabs.js" type="module"></script>
      <script src="components/bottomMenu.js" type="module"></script>
@@ -83,7 +132,7 @@
      <script src="components/scheduleCard.js" type="module"></script>
 
      <script src="components/assignmentCard.js" type="module"></script>
-     <script src="components/scheduleCard.js" type="module"></script>
-     <script src="components/scheduleCard.js" type="module"></script>
+     <script src="components/daysTab.js" type="module"></script>
+     <script src="components/timeList.js" type="module"></script>
 </body>
 </html>

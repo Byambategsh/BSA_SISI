@@ -33,24 +33,56 @@
             
         </header>
         <main>
-            <h5 class="pageTitle">Судалж буй хичээлүүд</h5>
-            <section class="subjectInfo">
-                <course-info courseId = "ICSI304"></course-info>                
+            <section class="staticSection">
+                 <h5 class="pageTitle">Судалж буй хичээлүүд</h5>
+                <article class="subjectInfo">
+                    <course-info courseId = "ICSI304"></course-info>                
+                </article>
+                <article class="middleTabs">
+                        <!-- <sub-tabs></sub-tabs> -->        
+                        <!-- <ul class="tabs">
+                            <li><a for=""> Даалгавар </a></li>
+                            <li><a href=""> Ирц </a></li>
+                            <li><a href=""> Оноо </a></li>
+                        </ul>   -->
+                    <label for="assignment" class="tabs">Даалгавар</label>
+                    <label for="attendance" class="tabs">Ирц</label>
+                    <label for="points" class="tabs">Оноо</label>
+                </article>
             </section>
-            <section class="middleTabs">
-                <!-- <sub-tabs></sub-tabs> -->        
-                <ul class="tabs">
-                    <li><a href="index.html"> Даалгавар </a></li>
-                    <li><a href=""> Ирц </a></li>
-                    <li><a href=""> Оноо </a></li>
-                </ul>  
-            </section>
-            <section class = "assignmentInfo">
-                <!-- <assignment-list></assignment-list> -->
-                <assignment-card dugaar = "1"></assignment-card>
-                <assignment-card dugaar = "2"></assignment-card>
-                <!-- <assignment-card courseId = "ICSI304"></assignment-card>
-                <assignment-card courseId = "ICSI304"></assignment-card> -->
+            <section class="dynamicSection">
+                <div class="tab-contents">
+                    <!-- tab1 -->
+                    <input type="radio" value="a1" id="assignment" name="a" class="tab">
+                    <!-- <div class="tab-content">tab1 content</div> -->
+                    <article slot="tab-content" id="assignment" class="tab-content">
+                        <assignment-card dugaar = "1"></assignment-card>
+                        <assignment-card dugaar = "2"></assignment-card>   
+                        <assignment-card dugaar = "3"></assignment-card> 
+                        <assignment-card dugaar = "4"></assignment-card>     
+                    </article>
+     
+                    <!-- tab2 -->
+                    <input type="radio" value="a2" id="attendance" name="a" class="tab">
+                    <!-- <div class="tab-content">tab2 content</div> -->
+                    <article slot="tab-content" id="schedule" class="tab-content">
+                        <attendance-info></attendance-info>                       
+                    </article>
+
+                    <input type="radio" value="a2" id="points" name="a" class="tab">
+                    <!-- <div class="tab-content">tab2 content</div> -->
+                    <article slot="tab-content" id="schedule" class="tab-content">
+                        <assignment-card dugaar = "1"></assignment-card>   
+                    </article>
+                 </div>
+
+                    <!-- <article class = "assignmentInfo">
+                        <assignment-list></assignment-list> 
+                        <assignment-card dugaar = "1"></assignment-card>
+                        <assignment-card dugaar = "2"></assignment-card>
+                        <assignment-card courseId = "ICSI304"></assignment-card>
+                        <assignment-card courseId = "ICSI304"></assignment-card> 
+                    </article> -->
             </section>
         </main>
         
@@ -74,9 +106,9 @@
         <script src="components/courseInfo.js" type="module"></script>
         <script src="components/subTabs.js" type="module"></script>
         <script src="components/scheduleCard.js" type="module"></script>
-
         <script src="components/assignmentCard.js" type="module"></script>
-        <script src="components/scheduleCard.js" type="module"></script>
+        <script src="components/attendanceInfo.js" type="module"></script>
+        
         <script src="components/scheduleCard.js" type="module"></script>
     </body>
 </html>

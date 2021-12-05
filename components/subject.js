@@ -1,4 +1,3 @@
-//import html from "./utils.js";
 //import './button-like.js';
 
 class Subject extends HTMLElement{
@@ -36,10 +35,12 @@ class Subject extends HTMLElement{
             if(result.length == 1){
             this.shadow.innerHTML = `
                 <style>
+                @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
+                @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
                     .subject_card {
                         margin: 1vw;
                         padding: 2vw;
-                        
                         height: auto;
                         //border: solid 1px;
                         text-align: left;  
@@ -53,16 +54,26 @@ class Subject extends HTMLElement{
                     }     
                    
                     p{
-                        //font-family: exo;
-                        //font-size: 16px;
+                        // font-family: 'M PLUS Rounded 1c', sans-serif;
+                        font-family: 'Nunito', sans-serif;
+                        // font-family: 'Exo 2', sans-serif;
+                        font-size: 1em;
                         margin: 1vh;
                         padding-top:5%;
+                        color:  #000033
+                        
                     }
                     a{
                         text-decoration: none;
+                        text-shadow: 3px 3px 10px #bfbfbf;
+                    }
+                    hr{
+                        opacity: 0.4;
                     }
                 </style>
+                <head>
                 
+                </head>
                 <article class = "subject_card">
                     <hr>
                     <div class="circle_badge">${this.badge}</div>

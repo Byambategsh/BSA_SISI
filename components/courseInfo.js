@@ -1,5 +1,5 @@
 // <courseInfo></courseInfo>
-//import './frameworks/css/uikit.mn.css';
+// import css from './frameworks/css/uikit.mn.css';
 
 class CourseInfo extends HTMLElement {
   constructor() {
@@ -25,56 +25,88 @@ class CourseInfo extends HTMLElement {
         if(result.length == 1){
          this.innerHTML=`
          <style>
-              .card{
-                
-                border-radius:0 0 16px 16px;
+            .card{
+                border-radius:7vw 7vw 0 7vw;
                 background-color: #ffffff;
-                padding: 2vw;
+                padding: 4vw;
                 margin-bottom: 1vh; 
                 /* display: flex;
                 flex-direction: column; */
-              }
-              
-              p{
-                  display: inline;
-                  margin: 0;
-              }
-              .pl{
-                  float: left;
-              }
-              .pr{
+            }
+            .text{
+                display: inline-grid;
+                grid-template-columns: auto auto auto;
+                grid-auto-rows: minmax(auto, 6vh);
+                grid-column-gap: 1vw;
+            }
+            p{
+                text-align: center;
+            }
+            .pl{
+                grid-column: 1;
+                grid-row: 1;
+            }
+            .pr{
+                grid-column: 3;
+                grid-row: 1;
+            }  
+            .pc{
+                grid-column: 2;
+                grid-row: 1;
+            }   
+            .icons{
+
+            }
+
+            //   p{
+            //       display: inline;
+            //   }
+            //   .pl{
+            //       float: left;
+            //   }
+            //   .pr{
                 
-                float: right;
-              }  
-              .pc{
-                  width: 70%;
-                  text-align: center;
-              }             
-              .moreInfo{
-                  display: inli
-              }
-              .subjMenu{
-                  margin-left: 5%;
-              }
+            //     float: right;
+            //   }  
+            //   .pc{
+            //       width: 70%;
+            //       text-align: center;
+            //   }             
+            
               .pageTitle{
-                  text-align: center;
-                  margin: auto;
+                text-align: center;
+                margin: auto;
+              }
+              hr{
+                border: 1px solid gray; //#E7E7F7
+              }
+              .svg{
+                  color: red;
               }
           </style>
 
           <article class="card">
-          <div class="text">
-              <p class="pl"><b>${this.courseId}</b></p>
-              <p class="pc"> | ${result[0].courseName} </p>
-              <p class="pr"> | ${result[0].credit}</p>
-          </div>
+
+            <div class="text">
+                <p class="pl"><b>${this.courseId}</b></p>
+                <p class="pc"> | ${result[0].courseName} </p>
+                <p class="pr"> | ${result[0].credit}</p>
+            </div>
           <hr>
-          <div class = "subjMenu uk-grid">
-              <i class="uk-width-1-4">i</i>
-              <i class="uk-width-1-4">i</i>
-              <i class="uk-width-1-4">i</i>
-              <i class="uk-width-1-4">i</i>
-          </div>
+            <div class = "subjMenu uk-grid" class="icons">
+                <div class="uk-width-1-4">
+                    
+                </div>
+                <div class="uk-width-1-4">
+                    <img src="Iconography/schedule.png"  alt="teams icon">
+                </div>
+                <div class="uk-width-1-4">
+                    <img src="Iconography/schedule.svg" alt="teams icon">
+                </div>
+                <div class="uk-width-1-4">
+                    <img src="Iconography/Microsoft_Teams-Logo.wine 1.png" alt="teams icon">
+                </div>
+            </div>
         </article>
          `;
             }

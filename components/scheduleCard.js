@@ -18,12 +18,20 @@ class ScheduleCard extends HTMLElement {
               .perSchedule{
                   margin: 1vw;
                   padding: 1vw;
-                  border: 1px solid gray;
+                  // border: 1px solid gray;
                   border-radius: 3vw;
                   height: 5vh;
+                  background-color: #ffe6f2;
+                  backdrop-filter: blur(12px);
+                  -webkit-backdrop-filter: blur(12px);
+              }
+              .perSchedule:hover{
+                background-color: #ff99ca;
               }
               p{
                 text-align: center;
+                font-family: 'M PLUS Rounded 1c', sans-serif;
+                font-size: 0.8em;
               }
             </style>
 

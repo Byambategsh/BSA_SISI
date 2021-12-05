@@ -21,51 +21,44 @@
             flex-direction: row; */
             display: inline;
         }
-        table, th, td {
-            border-left: 1px dotted #E7E7F6;
-            font-size: 0.9em;
-            height: 3vh;
-        }
-        
-        .middle-start{
-            float: right;
-        }
-        table {
-            width: 75px;
-            /* width: 20%; */
-            /* border-collapse: collapse; */
-        }
-        .attention{
+      
+        .attendance{
             width: 100%;
             text-align: center;
-            border: 1px dotted #c9c9db;
-            text-align: center;
+            border: 1px dotted #c9c9db;    
         }
-        .attention td{
+        .attendance td{
             width: 25%;
         }
         .scheduleTime{
             float: left;
             /* display: sticky; */
         }
-        .days{
+        .schedule{
             width: 70%;
             float: right;
         }
 
         /* Days */
+         .daysList .daysBorder:not(:first-child){ 
+            margin-left: 6%;
+        }
         .daysList{
             display: flex;
             flex-direction: row;
-            width: 100%;
+            justify-content: center;
+            /* text-align: justify; */
+            list-style:none;
+            font-family: m;
         }
         .daysBorder{
             border: 1px solid gray;
             border-radius: 50%;
+            padding: 1vw;
         }
         a{
             text-decoration: none;
-        }
+        } 
 
     </style>
 </head>
@@ -73,40 +66,37 @@
     <section id="subjectList">
         <p>Хичээлийн жагсаалт</p>
         <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
-        <!-- <sem-subject courseId = "ICSI304"></sem-subject>
-        <sem-subject courseId = "ICSI403"></sem-subject>
-        <sem-subject courseId = "THES401"></sem-subject>
-        <sem-subject courseId = "JOUR421"></sem-subject> -->
     </section>
     
     <p>Хичээлийн хуваарь</p>
     <section>
         <article class="days">
-            <div class="daysList">
-                <!-- tab group -->
-                <div class="daysBorder">
+            <!-- <days-tab></days-tab> -->
+            <ul class="daysList">
+                <li class="daysBorder">
                     <a href="#mon" slot="tabs">Да</a>
-                </div>
-                <div class="daysBorder">
+                </li>
+                <li class="daysBorder">
                     <a href="#tue" slot="tabs">Мя</a>
-                </div>
-                <div class="daysBorder">
+                </li>
+                <li class="daysBorder">
                     <a href="#wed" slot="tabs">Лх</a>
-                </div>
-                <div class="daysBorder">
+                </li>
+                <li class="daysBorder">
                     <a href="#thu" slot="tabs">Пү</a>
-                </div>
-                <div class="daysBorder">
+                </li>
+                <li class="daysBorder">
                     <a href="#fri" slot="tabs">Ба</a>
-                </div>
-                <div class="daysBorder">
+                </li>
+                <li class="daysBorder">
                     <a href="#sat" slot="tabs">Бя</a>
-                </div>
-                <div class="daysBorder">
+                </li>
+                <li class="daysBorder">
                     <a href="#sun" slot="tabs">Ня</a>
-                </div>
-            </div>                
-    
+                </li>
+            </ul>                
+        </article>
+        <article class="scheduleContent">
             <div slot="tabContent" id="mon">
                 
             </div>
@@ -116,7 +106,7 @@
             <div slot="tabContent" id="wed">
                 
             </div>
-            <div slot="tabContent" id="the">
+            <div slot="tabContent" id="thu">
                 
             </div>
             <div slot="tabContent" id="fri">
@@ -128,12 +118,18 @@
             <div slot="tabContent" id="sun">
                 
             </div>
+
             <!-- definition slot | tab group-->
             <div class="tabs" role="tablist">
                 <slot id="tab-slot" name="tabs"></slot>
+                
             </div>
+
             <div class="tabContent">
                 <slot id="tabContent-slot" name="tabContent"></slot>
+                <!-- Per day schedule -->
+                <!-- <per-schedule></per-schedule> -->
+                
             </div>
         </article>
     </section>
@@ -253,10 +249,10 @@
                 </tr>
             </table>
         </article>
-        <article class="days">
+        <article class="schedule">
             <tr>
-                <th class="days"></th>
-                <days-tab></days-tab>
+                <th class="schedule"></th>
+                
               </tr>
             
             <schedule-card></schedule-card>
@@ -267,15 +263,15 @@
         <p>Даалгаврын мэдээлэл</p>
         <assignment-card dugaar = "1"></assignment-card>
     </section>
-    <section id="attentionList">
+    <section id="attendanceList">
         <p>Ирцийн мэдээлэл</p>
-        <table class="attention">
+        <table class="attendance">
             <tr>
               <th colspan="2">Лекц</th>
-              <a href="https://icons8.com/icon/104/star"></a>
-              <th colspan="2">Семинар</th>
-              
+                <a href="https://icons8.com/icon/104/star"></a>
+              <th colspan="2">Семинар</th> 
             </tr>
+
             <tr>
               <td>Lec1</td>
               <td><i>i</i></td>
@@ -291,45 +287,117 @@
           </table>
     </section>
     <!-- Slot  -->
-    <section >
 
-        <ul class="tabs">
-            <li><a href="#subject" slot=tabs> Хичээл </a></li>
-            <li><a href="#schedule" slot=tabs> Хуваарь </a></li>
+    <section class="homePage">
+        <!-- <switch-tabs></switch-tabs> -->
+
+        <!-- <ul class="middle-tabs">
+            <input type="radio" id="radio" onclick="checkFunction()">
+
+            <li><a href="#subject" slot=tab > Хичээл </a></li>
+            <li><a href="#schedule" slot=tab> Хуваарь </a></li>
         </ul>  
-        
-        <div>
-            <!-- tab group -->
-            <a href="#tabpanel1-1" slot="tabs">Hicheel</a>
-            <a href="#tabpanel1-2" slot="tabs">Huvaari</a>
-            
 
-            <div slot="tabpanel" id="subject">
-                Contents of tabpanel 1-1 <button type="button">Button</button>
-            </div>
-            <div slot="tabpanel" id="schedule">
-                Contents of tabpanel 1-2 <button type="button">Button</button>
-            </div>
+        <div class="tabs">
+            <slot name="tab"></slot>            
+        </div> -->
+
+        <div class="tabContent">               
+            <sem-subject courseId = "ICSI304"></sem-subject> 
+            <slot name="tab-content"></slot>       
         </div>
-        <!-- definition slot | tab group-->
-            <div class="tabs" role="tablist">
-                <slot id="tab-slot" name="tabs"></slot>
-            </div>
-            <div class="tabContent">
-                <slot id="tabContent-slot" name="tabContent"></slot>
-            </div>
-            <!-- <div id="tablist" class="tablist" role="tablist">
-                <slot id="tab-slot" name="tab"></slot>
-            </div>
-            <div class="tabpanels">
-                <slot id="tabpanel-slot" name="tabpanel"></slot>
-            </div> -->
-            
+
+        <!-- <article slot="tab-content" id="subject">
+            Contents of tab 1
+            <sem-subject courseId = "ICSI304"></sem-subject>
+        </article>
+
+        <article slot="tab-content" id="schedule">
+            Contents of tab 2
+            <days-tab></days-tab>
+        </article> -->
+
+        <!-- <script>
+            function checkFunction(){
+                var x = document.getElementById("radio");
+                if(x.checked = true){
+                    
+                }
+            }
+        </script> -->
     </section>
+
+    <label for="subject" >Хичээл</label>
+    <label for="schedule" >Хуваарь</label>
+
+    <div class="tab-contents">
+        <!-- tab1 -->
+        <input type="radio" value="a1" id="subject" name="a" class="tab">
+        <!-- <div class="tab-content">tab1 content</div> -->
+        <article slot="tab-content" id="subject" class="tab-content">
+            tab1 content  
+            <sem-subject courseId = "ICSI304"></sem-subject>        
+        </article>
+
+        <!-- tab2 -->
+        <input type="radio" value="a2" id="schedule" name="a" class="tab">
+        <!-- <div class="tab-content">tab2 content</div> -->
+        <article slot="tab-content" id="schedule" class="tab-content">
+            tab2 content
+            <days-tab></days-tab>
+        </article>
+    </div>
+    <style>
+        label{
+            display: inline;
+        }
+        .tab {
+            display:none;
+        }   
+        .tab + .tab-content{
+            display:none;
+            opacity: 0;
+        }
+        .tab:checked + .tab-content {
+            display: inline;
+            animation-name: courseTextClick;
+            animation-duration: 2s;
+            opacity: 1;
+        }
+        @keyframes courseTextClick{
+            0% {opacity:0;}
+            100% {opacity:1;}
+        }
+    </style>
+
+      <!-- <script>
+        customElements.define('user-card', class extends HTMLElement {
+          connectedCallback() {
+            this.attachShadow({mode: 'open'});
+            
+            this.shadowRoot.innerHTML = `
+            <div>Name:
+                <slot name="username"></slot>
+              </div>
+              <div>Birthday:
+                <slot name="birthday"></slot>
+              </div>
+            `;
+          }
+        });
+        </script>
+        
+        <user-card>
+          <span slot="username">John Smith</span>
+          <span slot="birthday">01.01.2001</span>
+        </user-card> -->
 
     <script src="..\components/subject.js" type="module"></script>
     <script src="..\components/scheduleCard.js" type="module"></script>
     <script src="..\components/assignmentCard.js" type="module"></script>
+    <script src="..\components/switchTabs.js" type="module"></script>
+    <script src="..\components/daysTab.js" type="module"></script>
+
 </body>
 </html>
 

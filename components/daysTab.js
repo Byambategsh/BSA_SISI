@@ -91,15 +91,35 @@ class DaysTab extends HTMLElement {
             
             .card1{
                 grid-column: 2/4;
-                grid-row: 3/6;
+                grid-row: 11/14;
             }
             .card2{
                 grid-column: 2/4;
-                grid-row: 5/8;
+                grid-row: 3/6;
             }
             .card3{
                 grid-column: 2/4;
+                grid-row: 5/8;
+            }
+            .card4{
+                grid-column: 2/4;
                 grid-row: 9/12;
+            }
+            .card5{
+                grid-column: 2/4;
+                grid-row: 4/8;
+            }
+            .card6{
+                grid-column: 2/4;
+                grid-row: 7/10;
+            }
+            .card7{
+                grid-column: 2/4;
+                grid-row: 5/8;
+            }
+            .card8{
+                grid-column: 2/4;
+                grid-row: 1/12;
             }
 
             .tab:checked + label{
@@ -146,36 +166,31 @@ class DaysTab extends HTMLElement {
                <input type="radio" value="a2" id="tue" name="a" class="tab" style="display: none;">
                 <article slot="tab-content" id="tue" class="tab-content"> 
                         <time-list ></time-list>
-                        <schedule-card class="card1"></schedule-card>
-                        <schedule-card class="card2"></schedule-card>
-                        <schedule-card class="card3"></schedule-card> 
+                        
                 </article>
 
                 <!-- wed tab -->
                 <input type="radio" value="a3" id="wed" name="a" class="tab" style="display: none;">
                  <article slot="tab-content" id="wed" class="tab-content"> 
                          <time-list ></time-list>
-                         <schedule-card class="card1"></schedule-card>
                          <schedule-card class="card2"></schedule-card>
-                         <schedule-card class="card3"></schedule-card> 
+                         <schedule-card class="card3"></schedule-card>
+                         <schedule-card class="card4"></schedule-card> 
                  </article>
  
                  <!-- thu tab -->
                 <input type="radio" value="a4" id="thu" name="a" class="tab" style="display: none;">
                  <article slot="tab-content" id="thu" class="tab-content"> 
                          <time-list ></time-list>
-                         <schedule-card class="card1"></schedule-card>
-                         <schedule-card class="card2"></schedule-card>
-                         <schedule-card class="card3"></schedule-card> 
+                         <schedule-card class="card5"></schedule-card>
+                         <schedule-card class="card6"></schedule-card>       
                  </article>
  
                  <!-- fri tab -->
                 <input type="radio" value="a5" id="fri" name="a" class="tab" style="display: none;">
                  <article slot="tab-content" id="fri" class="tab-content"> 
                          <time-list ></time-list>
-                         <schedule-card class="card1"></schedule-card>
-                         <schedule-card class="card2"></schedule-card>
-                         <schedule-card class="card3"></schedule-card> 
+                         <schedule-card class="card7"></schedule-card>        
                  </article>
  
                  <!-- sat tab -->
@@ -189,7 +204,7 @@ class DaysTab extends HTMLElement {
                 <input type="radio" value="a7" id="sun" name="a" class="tab" style="display: none;">
                  <article slot="tab-content" id="sun" class="tab-content"> 
                          <time-list></time-list>
-                         <schedule-card class="card1"></schedule-card>
+                         <schedule-card class="card8"></schedule-card>
                           
                  </article>
                

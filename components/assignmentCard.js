@@ -47,10 +47,16 @@ class AssignmentCard extends HTMLElement {
                 // border: 1px solid gray;
 
                 background-color: #ffffff;
-                // backdrop-filter: blur(12px);
-                // -webkit-backdrop-filter: blur(12px);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
               }             
-            
+              h4{
+                margin-left: 3vw;
+              }
+              p{
+                font-size: 0.9em;
+                margin: auto;
+              }
               .subjName{
                   grid-column: 1/4;
                   grid-row: 1;
@@ -85,11 +91,11 @@ class AssignmentCard extends HTMLElement {
               // }
             </style>
             <article class="card">
-              <h4 class="subjName">${result[0].dugaar}. ${result[0].aName}<a href="">...</a></h4>
+              <h4 class="subjName txt">${result[0].dugaar}. ${result[0].aName}<a href="">...</a></h4>
                 
-              <p class="subjPoint"><b>${result[0].getPoint} / ${result[0].sumPoint}</b></p>
-              <p class = "initDate"> ${result[0].startDate} </p> 
-              <p class = "dueDate"> ${result[0].dueDate} </p>
+              <p class="subjPoint txt"><b>${result[0].getPoint} / ${result[0].sumPoint}</b></p>
+              <p class = "initDate txt"> ${result[0].startDate} </p> 
+              <p class = "dueDate txt"> ${result[0].dueDate} </p>
             </article> 
           `;
           }

@@ -2,12 +2,12 @@
 class AttendanceInfo extends HTMLElement {
   constructor() {
     super(); // always call super() first in the ctor.
-    this.shadowAttendance = this.attachShadow({
-        mode:"open"
-    });
+    // this.shadowAttendance = this.attachShadow({
+    //     mode:"open"
+    // });
   }
   connectedCallback() {
-    this.shadowAttendance.innerHTML = `
+    this.innerHTML = `
     <style>
         .attendance{
             width: 100%;
@@ -91,14 +91,14 @@ class AttendanceInfo extends HTMLElement {
 
             <tr>
               <td>Lec1</td>
-              <td><i>i</i></td>
+              <td><i class="fas fa-check"></i></td>
               <td>Sem1</td>
-              <td><i>i</i></td>
+              <td><i class="fas fa-times"></i></td>
             </tr>
 
             <tr>
               <td>Lec2</td>
-              <td><i>i</i></td>
+              <td><i class="far fa-circle"></i></td>
               <td>Sem2</td>
               <td><i>i</i></td>
             </tr>

@@ -30,17 +30,22 @@ class CourseInfo extends HTMLElement {
                 background-color: #ffffff;
                 padding: 4vw;
                 margin-bottom: 1vh; 
-                /* display: flex;
-                flex-direction: column; */
+                justify-content: center;
             }
             .text{
                 display: inline-grid;
                 grid-template-columns: auto auto auto;
                 grid-auto-rows: minmax(auto, 6vh);
                 grid-column-gap: 1vw;
+                text-align: center;
+            }
+            .icons{
+                margin: auto;
             }
             p{
                 text-align: center;
+                font-family: 'Nunito', sans-serif;
+                font-size: 0.85em;
             }
             .pl{
                 grid-column: 1;
@@ -54,11 +59,11 @@ class CourseInfo extends HTMLElement {
                 grid-column: 2;
                 grid-row: 1;
             }   
-            .icons{
-
-            }       
-            div > img{
-                border: 1px solid gray;
+                  
+            .subjIcon{
+                // width: 10vw;
+                // height: : 10vh;
+                border: 1px solid #E7E7F6;
                 border-radius: 50%;
                 padding: 2vw;
             }
@@ -82,11 +87,9 @@ class CourseInfo extends HTMLElement {
                 margin: auto;
               }
               hr{
-                border: 1px solid gray; //#E7E7F7
+                border: 0.5px solid gray; //#E7E7F7
               }
-              .svg{
-                  color: red;
-              }
+           
           </style>
 
           <article class="card">
@@ -97,18 +100,18 @@ class CourseInfo extends HTMLElement {
                 <p class="pr"> | ${result[0].credit}</p>
             </div>
           <hr>
-            <div class = "subjMenu uk-grid" class="icons">
-                <div class="uk-width-1-4" class="icon">
-                    <img src="Iconography/info.svg"  alt="teams icon" class="icon"> 
+            <div class = "subjMenu uk-grid icons">
+                <div class="uk-width-1-4">
+                    <img src="Iconography/info.svg" alt="course info" class="subjIcon" style="width: 10vw; height: auto;"> 
                 </div>
                 <div class="uk-width-1-4">
-                    <img src="Iconography/subjSchedule.svg"  alt="teams icon" class="icon">
+                    <img src="Iconography/subjSchedule.svg"  alt="course all schedule" class="subjIcon">
                 </div>
                 <div class="uk-width-1-4">
-                    <img src="Iconography/poll.svg" alt="teams icon" fill: blue; class="icon">
+                    <img src="Iconography/poll.svg" alt="teams icon" class="subjIcon">
                 </div>
                 <div class="uk-width-1-4">
-                    <img src="Iconography/Microsoft_Teams-Logo.wine 1.png" alt="teams icon" class="icon">
+                    <img src="Iconography/Microsoft_Teams-Logo.wine 1.png" alt="teams icon" class="subj">
                 </div>
             </div>
         </article>

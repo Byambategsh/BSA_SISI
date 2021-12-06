@@ -10,8 +10,7 @@ class BottomMenu extends HTMLElement {
   connectedCallback() {
     this.shadowMenu.innerHTML = `
     
-        <style>
-        
+        <style>  
             .mainMenu{
               width: 100%;
               height: 56px;
@@ -19,36 +18,45 @@ class BottomMenu extends HTMLElement {
               grid-template-columns: repeat(5, 1fr);    
               grid-column-gap: 2vw;
               background-color: #F1F2F7;
-              border-radius: 2vw;
-            }
-            
-            i{
-              margin: auto;
-              color: gray; 
-              size: 24px;
+              border-radius: 4vw;
+              box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+              z-index: 1;
             }
 
-            .mainMenu{
-              color: gray;
+            i{
+              margin: auto;
             }
-           .mainMenu i:hover{
-             transform: scale(1.3);
-             color:  #000099;
+
+            .icon{
+              filter: invert(6%) sepia(64%) saturate(3750%) hue-rotate(235deg) brightness(87%) contrast(118%);
+              width: 6vw;
+              height: 6vw;
+              opacity: 0.7;
             }
             
-            .mainMenu i:hover::after{
-              transform: scaleY(1.1);
+            .icon:hover{
+              transform: scale(1.2);   
               opacity: 1;
+              filter: invert(11%) sepia(89%) saturate(6630%) hue-rotate(246deg) brightness(72%) contrast(141%);
+            }
+
+            i:hover::after{
+              transform: scaleY(1.1);
               content: " ";
               display: block;
               width: 1vw;
               height: 1vw;
-              border-radius: 1vw;
+              border-radius: 50%;
               background-color:#5f0ef7;
               background-position: center; 
-              margin-left: 3.5vw; 
-              margin-top: -1vh;
+              margin: auto;  
             }
+            // active menu
+            i:hover::after:active{
+              transform: scale(1.1);
+              filter: invert(6%) sepia(64%) saturate(3750%) hue-rotate(235deg) brightness(87%) contrast(118%);
+            }
+
             .menu1{
               grid-column: 1;
               grid-row: 1;
@@ -69,12 +77,7 @@ class BottomMenu extends HTMLElement {
               grid-column: 5;
               grid-row: 1;
             }
-            .icon{
-              filter: gray;
-            }
-            .icon:hover{
-              filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
-            }
+            
             //  menu hoorondiin zai 
 
             // .mainMenu i:not(:first-child){ 
@@ -91,27 +94,27 @@ class BottomMenu extends HTMLElement {
          <div class="mainMenu">
             <i class="home" class="menu1">
               <a href="index.html">
-                <img src="Iconography/home.png" alt="teams icon" class="icon">
+                <img src="Iconography/home.png" alt="" class="icon">
               </a>
             </i>
-            <i class="far fa-star" class="menu2">
+            <i class="menu2">
               <a href="#">
-                <img src="Iconography/star_roundedCorner.svg" alt="teams icon" class="icon">
+                <img src="Iconography/star.png" alt="" class="icon">
               </a>
             </i>
-            <i class="fas fa-tasks" class="menu3">
+            <i class="menu3">
               <a href="#">
-                <img src="Iconography/program.svg" alt="teams icon" class="icon">
+                <img src="Iconography/program.svg" alt="" class="icon">
               </a>
             </i>
-            <i class="far fa-file" class="menu4">
+            <i class="menu4">
               <a href="#" >
-                <img src="Iconography/File.svg" alt=" icon" class="icon">
+                <img src="Iconography/File.svg" alt="" class="icon">
               </a>
             </i>
             <i class="help" class="menu5">
               <a href="#">
-                <img src="Iconography/option.png" alt="teams icon" class="icon">
+                <img src="Iconography/moreHorLine.png" alt="" class="icon">
               </a>
             </i>         
          </div>

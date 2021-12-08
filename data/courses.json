@@ -1,7 +1,8 @@
 [{
     "courseId" : "ICSI202", 
     "courseName" : "Өгөгдлийн бүтэц", 
-    "credit" : "3кр"
+    "credit" : "3кр",
+    "badge" : 1
 },
 {
     "courseId" : "ICSI304", 

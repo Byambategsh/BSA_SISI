@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Web Components</title>
+
+        <link rel="stylesheet"  href="css/style.css"/>
+        <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
+    </head>
+    <body >
+        <sem-subject courseId = "ICSI202"></sem-subject>
+        
+        <course-info courseId = "ICSI304"></course-info>
+        <assignment-card dugaar = "2"></assignment-card>
+        <days-tab></days-tab>   
+
+        <!-- <script>
+            customElements.define('user-card', class extends HTMLElement {
+            connectedCallback() {
+                this.attachShadow({mode: 'open'});
+                
+                this.shadowRoot.innerHTML = `
+                <div>Name:
+                    <slot name="username"></slot>
+                </div>
+                <div>Birthday:
+                    <slot name="birthday"></slot>
+                </div>
+                `;
+            }
+            });
+            </script>
+            
+            <user-card>
+            <span slot="username">John Smith</span>
+            <span slot="birthday">01.01.2001</span>
+            </user-card> -->
+        <footer>
+            <bottom-menu></bottom-menu>
+        </footer>
+        <script src="..\components/subject.js" type="module"></script>
+        <script src="..\components/scheduleCard.js" type="module"></script>
+        <script src="..\components/assignmentCard.js" type="module"></script>
+        <script src="..\components/switchTabs.js" type="module"></script>
+        <script src="..\components/daysTab.js" type="module"></script>
+        <script src="..\components/timeList.js" type="module"></script>
+        <script src="..\components/courseInfo.js" type="module"></script>
+        <script src="..\components/bottomMenu.js" type="module"></script>
+    </body>
+</html>
+
+<label for="subject" >Хичээл</label>
+    <label for="schedule" >Хуваарь</label>
+
+    <div class="tab-contents">
+        <!-- tab1 -->
+        <input type="radio" value="a1" id="subject" name="a" class="tab">
+        <!-- <div class="tab-content">tab1 content</div> -->
+        <article slot="tab-content" id="subject" class="tab-content">
+            tab1 content  
+            <sem-subject courseId = "ICSI304"></sem-subject>        
+        </article>
+
+        <!-- tab2 -->
+        <input type="radio" value="a2" id="schedule" name="a" class="tab">
+        <!-- <div class="tab-content">tab2 content</div> -->
+        <article slot="tab-content" id="schedule" class="tab-content">
+            tab2 content
+            <days-tab></days-tab>
+        </article>
+    </div>
+    <style>
+        label{
+            display: inline;
+        }
+        .tab {
+            display:none;
+        }   
+        .tab + .tab-content{
+            display:none;
+            opacity: 0;
+        }
+        .tab:checked + .tab-content {
+            display: inline;
+            animation-name: courseTextClick;
+            animation-duration: 2s;
+            opacity: 1;
+        }
+        @keyframes courseTextClick{
+            0% {opacity:0;}
+            100% {opacity:1;}
+        }
+    </style>
+

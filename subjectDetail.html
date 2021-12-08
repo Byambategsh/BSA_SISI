@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Хичээлийн дэлгэрэнгүй</title>
 
-        <link href="/open-iconic/font/css/open-iconic-foundation.css" rel="stylesheet">
+        <!-- <link href="/open-iconic/font/css/open-iconic-foundation.css" rel="stylesheet"> -->
         <link rel="stylesheet"  href="css/style.css"/>
         <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
         <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
@@ -28,9 +28,8 @@
     </head>
     <body>
         <header>
-            <img src="Iconography/Back.png" alt="back">
-            <a href="#">
-                <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
+            <a href="index.html">
+                <img src="Iconography/Back.png" alt="back" class="icon">
             </a>    
         </header>
         <main>
@@ -49,7 +48,7 @@
                 <!-- </article> -->
                 <div class="tab-contents">
                     <!-- tab1 -->
-                    <input type="radio" value="a1" id="assignment" name="a" class="tab">
+                    <input type="radio" value="a1" id="assignment" name="a" class="tab" checked="checked">
                     <!-- <div class="tab-content">tab1 content</div> -->
                     <article slot="tab-content" id="assignment" class="tab-content">
                         <assignment-card dugaar = "1"></assignment-card>
@@ -71,14 +70,6 @@
                         <assignment-card dugaar = "1"></assignment-card>   
                     </article>
                  </div>
-
-                    <!-- <article class = "assignmentInfo">
-                        <assignment-list></assignment-list> 
-                        <assignment-card dugaar = "1"></assignment-card>
-                        <assignment-card dugaar = "2"></assignment-card>
-                        <assignment-card courseId = "ICSI304"></assignment-card>
-                        <assignment-card courseId = "ICSI304"></assignment-card> 
-                    </article> -->
             </section>
         </main>
         

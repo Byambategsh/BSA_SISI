@@ -43,9 +43,7 @@ class AssignmentCard extends HTMLElement {
                 grid-column-gap: 1vw;
                 grid-row-gap: 1vw;
                 border-radius: 16px 16px 0 16px;
-                
-                // border: 1px solid gray;
-
+                box-shadow: 0 -2px 10px 0 rgb(0 0 0 / 20%), 0 0px 0px 0 rgb(0 0 0 / 19%);
                 background-color: #ffffff;
                 backdrop-filter: blur(12px);
                 -webkit-backdrop-filter: blur(12px);

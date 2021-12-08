@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
 
-    <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet">
+    <!-- <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet"> -->
 
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,79 +19,40 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
     
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-    <link href="/open-iconic/font/css/open-iconic-foundation.css" rel="stylesheet">
+    
 
     <!-- Rounded corner font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <style>
-       .card{
-          border: 1px solid gray;
-       }
-       .p{
-         display: inline;
-       }
-       .assignName{
-          overflow: hidden;
-       }
-       .mainMenu{
-          color: gray;
-       }
-       .mainMenu i:hover{
-         transform: scale(1.3);
-         color:  #000099;
-       }
-       
-      .mainMenu i:hover::after{
-         transform: scaleY(1.1);
-         opacity: 1;
-         content: " ";
-         margin-left: 2vw;
-         display: block;
-         width: 1vw;
-         height: 1vw;
-         border-radius: 1vw;
-         background-color:#5f0ef7;
-         background-position: center;  
-      }
-
-    </style>
-      
+ 
 </head>
 <body>
-   <script src="iconic.min.js"></script>
    <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
    <header>
       <a href="#">
          <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
       </a>
-      <img src="Iconography/bell.png"  alt="teams icon" class="icon"> 
-   </header>
+      <a href="#"></a>
+         <img src="Iconography/bell.png"  alt="teams icon" class="icon notif"> 
+      </a>
+      </header>
 
      <!-- Main content -->
    <main>
         <section class="calendar">
-            <bottom-menu></bottom-menu>
-            <span class="fi-icon-name" title="icon name" aria-hidden="true"></span>
-            
+               <plan-calendar></plan-calendar>
+             <!-- <smart-calendar></smart-calendar> -->
         </section>
 
         <section class="SnS">
 
-            <!-- <home-tabs></home-tabs>
-            <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
-            <sem-subject courseId = "ICSI304"></sem-subject>
-            <sem-subject courseId = "ICSI403"></sem-subject>
-            <sem-subject courseId = "THES401"></sem-subject>
-            <sem-subject courseId = "JOUR421"></sem-subject> -->
-            
             <label for="subject" class="tabs">Хичээл</label>
             <label for="schedule" class="tabs">Хуваарь</label>
 
             <div class="tab-contents">
 
                <!-- subject tab -->
-               <input type="radio" value="a1" id="subject" name="a" class="tab">
-               <!-- <div class="tab-content">tab1 content</div> -->
+               <input type="radio" value="a1" id="subject" name="a" class="tab" checked="checked">
+               
                <article slot="tab-content" id="subject" class="tab-content">
                   <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
                   <sem-subject courseId = "ICSI304"></sem-subject>
@@ -102,37 +63,18 @@
 
                <!-- schedule tab -->
                <input type="radio" value="a2" id="schedule" name="a" class="tab">
-               <!-- <div class="tab-content">tab2 content</div> -->
+               
                <article slot="tab-content" id="schedule" class="tab-content">
                      <days-tab></days-tab>   
-                     <div class="perDay">
-                        <!-- <time-list ></time-list> -->
-                        <!-- <div class="daySchedules">
-                           <time-list ></time-list>
-                           <schedule-card class="card1"></schedule-card>
-                           <schedule-card class="card2"></schedule-card>
-                           <schedule-card class="card3"></schedule-card>
-                        </div>  -->
-                     </div>
                </article>
             </div>
         </section>
      </main>
 
-
      <!-- Bottom Menu -->
      <footer>
-        <!-- <bottom-menu></bottom-menu> -->
-        <hr>
-         <div class="mainMenu">
-            <!-- <img src="Iconography/home_icon.svg" alt="home icon"> -->
-            <i class="fa fa-home "><a href="index.html" class="menuLink activeMenu"></a></i>
-            <i class="far fa-star ">
-            </i>
-            <i class="fas fa-tasks "></i>
-            <i class="far fa-file "></i>
-            <i class="fas fa-question"></i>         
-         </div>
+        
+        <bottom-menu></bottom-menu>
       </footer>
 
       <!-- import web components -->
@@ -146,5 +88,7 @@
      <script src="components/assignmentCard.js" type="module"></script>
      <script src="components/daysTab.js" type="module"></script>
      <script src="components/timeList.js" type="module"></script>
+     <script src="components/calendar.js" type="module"></script>
+     <script src="components/profile.js" type="module"></script>
 </body>
 </html>

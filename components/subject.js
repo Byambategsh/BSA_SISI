@@ -23,15 +23,6 @@ class Subject extends HTMLElement{
                 
                 const result = data.filter(subj => subj.courseId == this.courseId);
 
-
-                /*const mySubject = JSON.parse(numSubjects);
-
-                for(let i=0; i < data.length; i++){
-                    this.courseId = data[i].courseId;
-                    this.courseName = data[i].courseName; 
-               }*/
-                
-                //badge
             if(result.length == 1){
             this.shadow.innerHTML = `
                 <style>
@@ -47,10 +38,13 @@ class Subject extends HTMLElement{
                     }
                     .circle_badge {
                         float: right; 
-                        width: max-content;
-                        height: max-content;
+                        width: 5vw;
+                        height: 5vw;
                         background-color: #C0392B;
                         border-radius: 50%;
+                        color: white;
+                        font-size: 0.8em;
+                        padding-left:auto;
                     }     
                    
                     p{

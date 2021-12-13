@@ -18,9 +18,10 @@ class BottomMenu extends HTMLElement {
               grid-template-columns: repeat(5, 1fr);    
               grid-column-gap: 2vw;
               background-color: #F1F2F7;
-              border-radius: 4vw;
-              box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+              border-radius: 4vw 4vw 0 0; 
               z-index: 1;
+              box-shadow: 1px 1px 8px #000066, 0 0 8px #e6e6ff;
+              margin-top: 1vh;
             }
 
             i{
@@ -31,31 +32,25 @@ class BottomMenu extends HTMLElement {
               filter: invert(6%) sepia(64%) saturate(3750%) hue-rotate(235deg) brightness(87%) contrast(118%);
               width: 6vw;
               height: 6vw;
-              opacity: 0.7;
             }
             
             .icon:hover{
               transform: scale(1.2);   
-              opacity: 1;
-              filter: invert(11%) sepia(89%) saturate(6630%) hue-rotate(246deg) brightness(72%) contrast(141%);
+              filter: invert(9%) sepia(98%) saturate(6266%) hue-rotate(246deg) brightness(54%) contrast(126%);
             }
 
-            i:hover::after{
-              transform: scaleY(1.1);
+             i:hover::after
+           {
+              transform: scaleY(1.2);
               content: " ";
               display: block;
               width: 1vw;
               height: 1vw;
               border-radius: 50%;
-              background-color:#5f0ef7;
+              background-color: #0000b3;
               background-position: center; 
               margin: auto;  
-            }
-            // active menu
-            i:hover::after:active{
-              transform: scale(1.1);
-              filter: invert(6%) sepia(64%) saturate(3750%) hue-rotate(235deg) brightness(87%) contrast(118%);
-            }
+            }         
 
             .menu1{
               grid-column: 1;
@@ -92,7 +87,7 @@ class BottomMenu extends HTMLElement {
         </style>
                
          <div class="mainMenu">
-            <i class="home" class="menu1">
+            <i class="menu1 menu_active">
               <a href="index.html">
                 <img src="Iconography/home.png" alt="" class="icon">
               </a>

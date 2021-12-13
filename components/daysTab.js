@@ -6,9 +6,23 @@ class DaysTab extends HTMLElement {
     this.shadowTab = this.attachShadow({
         mode : 'open'
     });
+
+    this.courses = [];
   }
+  fetchData(){
+    //   console.log("****************** fetching...")
+      
+  }
+
   connectedCallback() {
-    this.shadowTab.innerHTML = `
+    fetch("http://127.0.0.1:5500/data/courses.json")
+          .then(response => response.json())
+        .then(data => {
+
+      this.courses = data;
+
+      this.shadowTab.innerHTML = `
+
         <style>
             .daysMenu{
                 width: 100%;
@@ -16,8 +30,8 @@ class DaysTab extends HTMLElement {
                 display: inline-grid;
                 grid-template-columns: repeat(7, 1fr);
                 grid-column-gap: 2vw;
-                background-color: #F1F2F7;
-                border-radius: 2vw; 
+                // text-shadow: 2px 1px 10px #000099;
+                margin: 1vh 0;
               }
 
             .mon{
@@ -51,14 +65,11 @@ class DaysTab extends HTMLElement {
 
             label{
                 margin: auto;
-                padding: 2vw;
-            }
-
-            // .i{
-            //     border: 1px solid gray;
-            //     border-radius: 50%;
-            //     padding: 1vw;
-            // }          
+                padding: 1vw 2vw;
+                border: 1px dotted #333;
+                border-radius: 1rem;
+                background-color: #F1F2F7;
+            }     
 
             // switch tabs
             .tab{
@@ -78,7 +89,6 @@ class DaysTab extends HTMLElement {
                 grid-auto-rows: 3vh; 
                 grid-column-gap: 1vw;
                 grid-row-gap: 2vw;
-
                 animation-name: courseTextClick;
                 animation-duration: 1s;
                 opacity: 1;                
@@ -121,10 +131,7 @@ class DaysTab extends HTMLElement {
                 grid-column: 2/4;
                 grid-row: 1/12;
             }
-
-            .tab:checked + label{
-                color: red;
-            }
+            
             // Animation for switch tabs 
             @keyframes courseTextClick{
                 0% {opacity:0;}
@@ -132,84 +139,35 @@ class DaysTab extends HTMLElement {
             }
             label:hover{
                 transform: scale(1.1);
-                color:  #000099;
+                color:  #fff;
+                background-color: #000099; 
               }
         </style>
         
         <div class="daysMenu">
             <!-- tab group -->
-            <label for="mon" class="mon">Да</label>
+            <label for="weekday_1" class="mon">Да</label>
 
-            <label for="tue" class="tue">Мя</label>
+            <label for="weekday_2" class="tue">Мя</label>
 
-            <label for="wed" class="wed">Лх</label>
+            <label for="weekday_3" class="wed">Лх</label>
 
-            <label for="thu"class="thu">Пү</label>
+            <label for="weekday_4"class="thu">Пү</label>
 
-            <label for="fri" class="fri">Ба</label>
+            <label for="weekday_5" class="fri">Ба</label>
 
-            <label for="sat" class="sat">Бя</label>
+            <label for="weekday_6" class="sat">Бя</label>
 
-            <label for="sun" class="sun">Ня</label>
+            <label for="weekday_7" class="sun">Ня</label>
         </div>  
 
             <div class="tab-contents">
 
-               <!-- mon tab -->
-               <input type="radio" value="a1" id="mon" name="a" class="tab" style="display: none;">
-               <article slot="tab-content" id="mon" class="tab-content">
-                        <time-list ></time-list>
-                        <schedule-card class="card1"></schedule-card>
-               </article>
-               
-               <!-- tue tab -->
-               <input type="radio" value="a2" id="tue" name="a" class="tab" style="display: none;">
-                <article slot="tab-content" id="tue" class="tab-content"> 
-                        <time-list ></time-list>
-                        
-                </article>
-
-                <!-- wed tab -->
-                <input type="radio" value="a3" id="wed" name="a" class="tab" style="display: none;">
-                 <article slot="tab-content" id="wed" class="tab-content"> 
-                         <time-list ></time-list>
-                         <schedule-card class="card2"></schedule-card>
-                         <schedule-card class="card3"></schedule-card>
-                         <schedule-card class="card4"></schedule-card> 
-                 </article>
- 
-                 <!-- thu tab -->
-                <input type="radio" value="a4" id="thu" name="a" class="tab" style="display: none;">
-                 <article slot="tab-content" id="thu" class="tab-content"> 
-                         <time-list ></time-list>
-                         <schedule-card class="card5"></schedule-card>
-                         <schedule-card class="card6"></schedule-card>       
-                 </article>
- 
-                 <!-- fri tab -->
-                <input type="radio" value="a5" id="fri" name="a" class="tab" style="display: none;">
-                 <article slot="tab-content" id="fri" class="tab-content"> 
-                         <time-list ></time-list>
-                         <schedule-card class="card7"></schedule-card>        
-                 </article>
- 
-                 <!-- sat tab -->
-                <input type="radio" value="a6" id="sat" name="a" class="tab" style="display: none;">
-                 <article slot="tab-content" id="sat" class="tab-content"> 
-                         <time-list ></time-list>
-                         
-                 </article>
- 
-                 <!-- sun tab -->
-                <input type="radio" value="a7" id="sun" name="a" class="tab" style="display: none;">
-                 <article slot="tab-content" id="sun" class="tab-content"> 
-                         <time-list></time-list>
-                         <schedule-card class="card8"></schedule-card>
-                          
-                 </article>
+              ${this.generateWeekdayTabs()}
                
             </div>
-    `;
+       `;
+    });
   }
   disconnectedCallback() {
     
@@ -217,6 +175,55 @@ class DaysTab extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     
   }
+
+generateWeekdayTabs() {
+    const today = new Date();
+    console.log(today);
+
+    const day = today.getDay();
+    console.log(day);
+    // if(day == 0)
+    //     day = 7;
+    let retValue="";
+
+    for (let i = 0; i < 7; i++)
+    {
+
+        if(i == day){
+            retValue += `<input type="radio" value="a1" id="weekday_${i}" name="a" class="tab" style="display: none;" checked="checked">
+            <article slot="tab-content" class="tab-content">
+                    <time-list ></time-list>
+                    ${this.generateScheduleCards(i)}
+            </article>`
+        }else{
+            retValue += `<input type="radio" value="a1" id="weekday_${i}" name="a" class="tab" style="display: none;">
+            <article slot="tab-content" class="tab-content">
+                    <time-list ></time-list>
+                    ${this.generateScheduleCards(i)}
+            </article>`
+        } 
+    }
+             
+    return retValue;
+}
+
+generateScheduleCards(garig) {
+
+    // console.log(`GARIG=${garig} courses=${this.courses}`);
+    let scheduleCards = "";
+    this.courses.forEach(c => {
+        // console.log(`%%%%%%%%%%%% c=${JSON.stringify(c)}`);
+        c.schedule?.forEach(s => {
+        
+                // console.log(`############## s=${s}`);
+                // console.log(`${s.type}`);
+            if (s.weekday == garig) {
+                scheduleCards += `<schedule-card courseId = ${c.courseId} type=${s.type} start=${s.start} duration=${s.duration} room=${s.room}></schedule-card>`
+            }
+        })
+    })
+    return scheduleCards;
+    }
 }
 
 window.customElements.define('days-tab', DaysTab);

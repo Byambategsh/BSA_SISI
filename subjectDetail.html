@@ -34,15 +34,16 @@
         </header>
         <main>
             <section class="staticSection">
-                 <h5 class="pageTitle">Судалж буй хичээлүүд</h5>
+                 <p class="pageTitle">Судалж буй хичээлүүд</p>
                 <article class="subjectInfo">
-                    <course-info courseId = "ICSI304"></course-info>                
+                    <course-info courseId = "ICSI202"></course-info>                
+                    <!-- <course-detail courseId = "ICSI304"></course-detail> -->
                 </article>
                 
             </section>
             <section class="dynamicSection">
                 <!-- <article class="middleTabs"> -->
-                    <label for="assignment" class="tabs">Даалгавар</label>
+                    <label for="assignment" class="tabs active">Даалгавар</label>
                     <label for="attendance" class="tabs">Ирц</label>
                     <label for="points" class="tabs">Оноо</label>
                 <!-- </article> -->
@@ -51,17 +52,22 @@
                     <input type="radio" value="a1" id="assignment" name="a" class="tab" checked="checked">
                     <!-- <div class="tab-content">tab1 content</div> -->
                     <article slot="tab-content" id="assignment" class="tab-content">
-                        <assignment-card dugaar = "1"></assignment-card>
-                        <assignment-card dugaar = "2"></assignment-card>   
-                        <assignment-card dugaar = "3"></assignment-card> 
-                        <assignment-card dugaar = "4"></assignment-card>     
+                        <!-- <script>
+                            for (let i = 0; i < result.length; i++) {
+                                <sem-subject result[0].courseId = "ICSI304"></sem-subject>
+                            }
+                        </script> -->
+                        <assignment-card courseId = "ICSI202"></assignment-card>
+                        <!-- <assignment-list></assignment-list>    -->
+                        <!-- <assignment-list dugaar = "3"></assignment-list>  -->
+                       
                     </article>
      
                     <!-- tab2 -->
                     <input type="radio" value="a2" id="attendance" name="a" class="tab">
                     <!-- <div class="tab-content">tab2 content</div> -->
                     <article slot="tab-content" id="schedule" class="tab-content">
-                        <attendance-info></attendance-info>                       
+                        <attendance-info courseId = "ICSI202"></attendance-info>                       
                     </article>
 
                     <input type="radio" value="a2" id="points" name="a" class="tab">
@@ -86,7 +92,6 @@
         <script src="components/scheduleCard.js" type="module"></script>
         <script src="components/assignmentCard.js" type="module"></script>
         <script src="components/attendanceInfo.js" type="module"></script>
-        
-        <script src="components/scheduleCard.js" type="module"></script>
+        <script src="components/assignmentList.js" type="module"></script>
     </body>
 </html>

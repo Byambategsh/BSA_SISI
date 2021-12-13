@@ -11,7 +11,7 @@ class Subject extends HTMLElement{
         this.courseId = this.getAttribute("courseId");
         this.courseName = this.getAttribute("courseName");
         console.log(this.courseId);
-        this.badge = this.getAttribute("badge");
+        this.notification = this.getAttribute("notification");
     }
     connectedCallback(){
         fetch("http://127.0.0.1:5500/data/courses.json").then(response => response.json())
@@ -38,24 +38,30 @@ class Subject extends HTMLElement{
                     }
                     .circle_badge {
                         float: right; 
-                        width: 5vw;
-                        height: 5vw;
+                        // width: 5vw;
+                        // height: 5vw;
+                        padding: 0 1.5vw;
                         background-color: #C0392B;
                         border-radius: 50%;
-                        color: white;
-                        font-size: 0.8em;
-                        padding-left:auto;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }     
                    
-                    p{
+                    h4{
                         // font-family: 'M PLUS Rounded 1c', sans-serif;
                         font-family: 'Nunito', sans-serif;
-                        // font-family: 'Exo 2', sans-serif;
                         font-size: 0.9em;
                         margin: 1vh;
                         padding-top:5%;
                         color:  #000033
                         
+                    }
+                    p{
+                        color: white;
+                        font-size: 0.8em;
+                        margin:auto;
+                        text-align: center;
                     }
                     a{
                         text-decoration: none;
@@ -65,17 +71,31 @@ class Subject extends HTMLElement{
                         opacity: 0.4;
                     }
                 </style>
-                <head>
-                
-                </head>
+
                 <article class = "subject_card">
                     <hr>
-                    <div class="circle_badge">${this.badge}</div>
-                    <a href="subjectDetail.html" class="link"><p><b>${this.courseId}</b> | ${result[0].courseName}</p></a>
+                    <div class="circle_badge"><p>${result[0].notification.length}</p></div>
+                    <a href="subjectDetail.html" class="link"><h4><b>${this.courseId}</b> | ${result[0].courseName}</h4></a>
                 </article>
             `;
         }
         });
+    }
+    checkNoti(cnt){
+        if(cnt > 0){
+            `<article class = "subject_card">
+                <hr>
+                <div class="circle_badge"><p>${result[0].notification.length}</p></div>
+                <a href="subjectDetail.html" class="link"><h4><b>${this.courseId}</b> | ${result[0].courseName}</h4></a>
+                </article>`
+        }
+        else{
+        `<article class = "subject_card">
+            <hr>
+            <div class="circle_badge"><p>${result[0].notification.length}</p></div>
+            <a href="subjectDetail.html" class="link"><h4><b>${this.courseId}</b> | ${result[0].courseName}</h4></a>
+        </article>`
+        }
     }
 }
 customElements.define('sem-subject', Subject);

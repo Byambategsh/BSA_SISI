@@ -3,12 +3,12 @@
 class Calendar extends HTMLElement {
   constructor() {
     super(); // always call super() first in the ctor.
-    this.shadow = this.attachShadow({
-      mode:"open"
-  });  
+//     this.shadow = this.attachShadow({
+//       mode:"open"
+//   });  
   }
   connectedCallback() {
-    this.shadow.innerHTML = `
+    this.innerHTML = `
       <style>
           :root {
             --dark-body: #4d4c5a;
@@ -326,7 +326,7 @@ class Calendar extends HTMLElement {
 
       <!--HTML-->
       <body class="light">
-
+      <script src="app.js"></script>
         <div class="calendar">
             <div class="calendar-header">
                 <span class="month-picker" id="month-picker">February</span>
@@ -362,7 +362,7 @@ class Calendar extends HTMLElement {
             </div>
             <div class="month-list"></div>
         </div>
-</body>
+    </body>
     `;
   }
   disconnectedCallback() {
@@ -371,6 +371,7 @@ class Calendar extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     
   }
+  
 }
 
 window.customElements.define('event-calendar', Calendar);

@@ -2,25 +2,473 @@
     "courseId" : "ICSI202", 
     "courseName" : "Өгөгдлийн бүтэц", 
     "credit" : "3кр",
-    "badge" : 1
+    "badge" : 3,
+    "notification" : [
+        {
+            "name": "Time complexity лекц нэмэгдлээ."
+        },
+        {
+            "name": "C hel даалгавар нэмэгдлээ."
+        },
+        {
+            "name": "C hel даалгавар нэмэгдлээ."
+        }
+    ],
+    "schedule":[
+        {
+            "weekday": 1, 
+            "start": 10,
+            "duration": 2,
+            "room" :"3-200",
+            "type": "lec"
+        },
+        {
+            "weekday": 4,
+            "start": 7,
+            "duration": 2,
+            "room" :"2-200",
+            "type":"sem"
+        }
+    ],
+    "assignment":[
+        {
+            "type":"lec",
+            "dugaar":"1",
+            "aName":"Time complexity",
+            "sumPoint":"0",
+            "getPoint":"?",
+            "startDate":"2021.09.06",
+            "dueDate":"2021.09.13"
+        },
+        {
+            "type":"sem",
+            "dugaar":"1",
+            "aName":"C hel",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.09.03",
+            "dueDate":"2021.09.10"
+        },
+        {
+            "type":"lec",
+            "dugaar":"2",
+            "aName":"Stack, queue, list",
+            "sumPoint":"0",
+            "getPoint":"?",
+            "startDate":"2021.09.10",
+            "dueDate":"2021.09.17"
+        },
+        {
+            "type":"sem",
+            "dugaar":"2",
+            "aName":"Sorts, stack, queue, list",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.09.09",
+            "dueDate":"2021.09.16"
+        },
+        {
+            "type":"lec",
+            "dugaar":"3",
+            "aName":"Complete Binary tree",
+            "sumPoint":"0",
+            "getPoint":"?",
+            "startDate":"2021.09.15",
+            "dueDate":"2021.09.22"
+        },
+        {
+            "type":"sem",
+            "dugaar":"3",
+            "aName":"Complete Binary tree",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.09.16",
+            "dueDate":"2021.09.23"
+        }
+    ],
+    "attendance":[
+        {
+            "type": "lec",
+            "num": 1, 
+            "date": "2021/09/05",
+            "val": "т"
+        },
+        {
+            "type": "lec",
+            "num": 2, 
+            "date": "2021/09/12",
+            "val": "ө"
+        },
+        {
+            "type": "lec",
+            "num": 3, 
+            "date": "2021/09/19",
+            "val": "и"
+        },
+        {
+            "type": "lec",
+            "num": 4, 
+            "date": "2021/09/22",
+            "val": "т"
+        },
+        {
+            "type": "lec",
+            "num": 5, 
+            "date": "2021/09/29",
+            "val": "ө"
+        },
+        {
+            "type": "lec",
+            "num": 6, 
+            "date": "2021/10/06",
+            "val": "и"
+        },
+        {
+            "type": "lec",
+            "num": 7, 
+            "date": "2021/10/13",
+            "val": "т"
+        },
+        {
+            "type": "lec",
+            "num": 8, 
+            "date": "2021/10/20",
+            "val": "ө"
+        },
+      
+        {
+            "type": "sem",
+            "num": 1, 
+            "date": "2021/09/02",
+            "val": "и"
+        },
+        {
+            "type": "sem",
+            "num": 2, 
+            "date": "2021/09/09",
+            "val": "и"
+        },
+        {
+            "type": "sem",
+            "num": 3, 
+            "date": "2021/09/16",
+            "val": "т"
+        },
+        {
+            "type": "sem",
+            "num": 4, 
+            "date": "2021/09/23",
+            "val": "и"
+        },
+        {
+            "type": "sem",
+            "num": 5, 
+            "date": "2021/09/30",
+            "val": "и"
+        },
+        {
+            "type": "sem",
+            "num": 6, 
+            "date": "2021/10/07",
+            "val": "т"
+        },
+        {
+            "type": "sem",
+            "num": 7, 
+            "date": "2021/10/14",
+            "val": "и"
+        },
+        {
+            "type": "sem",
+            "num": 8, 
+            "date": "2021/10/21",
+            "val": "и"
+        }
+    ]
 },
 {
     "courseId" : "ICSI304", 
     "courseName" : "Програм хангамжийн зохиомж ба архитектур", 
-    "credit" : "3кр"
+    "credit" : "3кр",
+    "notification" : [
+        {
+            "name": "Time complexity лекц нэмэгдлээ."
+        },
+        {
+            "name": "C hel даалгавар нэмэгдлээ."
+        }
+    ],
+    "schedule":[
+        {
+            "weekday": 3, 
+            "start": 9,
+            "duration": 2,
+            "room" :"3-200",
+            "type": "lec"
+        },
+        {
+            "weekday": 4,
+            "start": 3,
+            "duration": 3,
+            "room" :"2-200",
+            "type":"lab"
+        }
+    ],
+    "assignment":[
+        {
+            "type":"lec",
+            "dugaar":"1",
+            "aName":"Lec10",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"lec",
+            "dugaar":"2",
+            "aName":"Lec20",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"sem",
+            "dugaar":"1",
+            "aName":"",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"sem",
+            "dugaar":"2",
+            "aName":"Sem2",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"lab",
+            "dugaar":"1",
+            "aName":"Lab1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        }
+    ]
 },
 {
     "courseId" : "ICSI403", 
     "courseName" : "Програм хангамжийн чанар ба тестлэл", 
-    "credit" : "2кр"
+    "credit" : "2кр",
+    "notification" : [
+        
+    ],
+    "schedule":[
+        {
+            "weekday": 5, 
+            "start": 1,
+            "duration": 2,
+            "room" :"3-200",
+            "type": "lec"
+        }
+    ],
+    "assignment":[
+        {
+            "type":"lec",
+            "dugaar":"1",
+            "aName":"Lec1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"lec",
+            "dugaar":"2",
+            "aName":"Lec2",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"sem",
+            "dugaar":"1",
+            "aName":"Sem1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"sem",
+            "dugaar":"2",
+            "aName":"Sem2",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"lab",
+            "dugaar":"1",
+            "aName":"Lab1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        }
+    ]
 },
 {
     "courseId" : "THES401", 
     "courseName" : "Бакалаврын судалгааны ажил", 
-    "credit" : "3кр"
+    "credit" : "3кр",
+    "notification" : [
+        {
+            "name": "Жинхэнэ хамгаалалт тайлан хураалт нэмэгдлээ."
+        }
+    ],
+    "schedule":[
+        {
+            "weekday": 0, 
+            "start": 1,
+            "duration": 16,
+            "room" :"3-200",
+            "type": "lab"
+        },
+        {
+            "weekday": 5,
+            "start": 3,
+            "duration": 3,
+            "room" :"2-200",
+            "type":"lab"
+        }
+    ],
+    "assignment":[
+        {
+            "type":"lec",
+            "dugaar":"1",
+            "aName":"Lec1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"lec",
+            "dugaar":"2",
+            "aName":"Lec2",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"sem",
+            "dugaar":"1",
+            "aName":"Sem1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"sem",
+            "dugaar":"2",
+            "aName":"Sem2",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"lab",
+            "dugaar":"1",
+            "aName":"Lab1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        }
+    ]
 },
 {
     "courseId" : "JOUR421", 
     "courseName" : "Олон нийтийн мэдээллийн хэрэгслийн реклам II", 
-    "credit" : "3кр"
+    "credit" : "3кр",
+    "notification" : [
+        {
+            "name": "Time complexity лекц нэмэгдлээ."
+        }
+    ],
+    "schedule":[
+        {
+            "weekday": 3, 
+            "start": 3,
+            "duration": 2,
+            "room" :"3-200",
+            "type": "lec"
+        },
+        {
+            "weekday": 3,
+            "start": 5,
+            "duration": 2,
+            "room" :"2-200",
+            "type":"sem"
+        }
+    ],
+    "assignment":[
+        {
+            "type":"lec",
+            "dugaar":"1",
+            "aName":"Lec1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"lec",
+            "dugaar":"2",
+            "aName":"Lec2",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"sem",
+            "dugaar":"1",
+            "aName":"Sem1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"sem",
+            "dugaar":"2",
+            "aName":"Sem2",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        },
+        {
+            "type":"lab",
+            "dugaar":"1",
+            "aName":"Lab1",
+            "sumPoint":"10",
+            "getPoint":"?",
+            "startDate":"2021.10.17",
+            "dueDate":"2021.10.24"
+        }
+    ]
 }]

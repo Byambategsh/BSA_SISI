@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calendar
+    </title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body class="light">
+
+    <div class="calendar">
+        <div class="calendar-header">
+            <div class="month-picker">
+                <span id="year"></span>,
+                <span id="month-picker">February</span>
+            </div>
+            <div class="year-picker">
+                <span class="year-change" id="prev-year">
+                    <pre><</pre>
+                </span>
+                <span id="week">16</span>
+                <span class="year-change" id="next-year">
+                    <pre>></pre>
+                </span>
+            </div>
+        </div>
+        <!-- <hr style="color: blue; background-color: blue; height: 1px; margin: 3vw;"> -->
+        <div class="calendar-body">
+            <div class="calendar-week-day">
+                <div>Да</div>
+                <div>Мя</div>
+                <div>Лх</div>
+                <div>Пү</div>
+                <div>Ба</div>
+                <div>Бя</div>
+                <div>Ня</div>
+            </div>
+            <div class="calendar-days"></div>
+            
+        </div>
+        <div class="calendar-footer">
+            <div class="toggle">
+                <span>Dark Mode</span>
+                <div class="dark-mode-switch">
+                    <div class="dark-mode-switch-ident"></div>
+                </div>
+            </div>
+        </div>
+        <div class="month-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+<!-- div*10{&} -->

@@ -4,7 +4,6 @@
 
 body{
     margin: auto;
-    overflow: hidden;
 }
 
 .staticSection{
@@ -19,18 +18,22 @@ a{
 /* Typography | font style, size */
 
 p, h5, label{
-    font-family: 'M PLUS Rounded 1c', sans-serif;
-    /* font-family: 'Nunito', sans-serif; */
+    /* font-family: 'M PLUS Rounded 1c', sans-serif; */
+    font-family: 'Nunito', sans-serif;
     font-size: 0.9em;
     color: #333;
 }
 label{
     display: inline;
     padding: 3vw;
+    text-shadow: 4px 2px 4px #e6e6ff;
+    font-size: 1em;
 }
-label:hover{
-    transform: scale(1.1);
+.active{
+    transform: scale(1.2);
     color:  #000099;
+    font-weight: 600;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
 /* label:hover::after{
@@ -85,18 +88,7 @@ time-list{
     grid-column: 1;
     grid-row: 1/17;
 }
-.card1{
-    grid-column: 2/4;
-    grid-row: 3/6;
-}
-.card2{
-    grid-column: 2/4;
-    grid-row: 5/8;
-}
-.card3{
-    grid-column: 2/4;
-    grid-row: 9/12;
-}
+
 /* Schedule tab grid container | repeat(3, 1fr)*/
 /* #schedule{
     margin-top: 1vh;
@@ -133,8 +125,8 @@ schedule-card{
         margin: 1vh auto;
     }
     .calendar{
-        margin: 8px 16px;
-        height: 20vh;
+        margin: 4vw;
+        height: auto;
         /* border: 1px dotted gray; */
     }
     .SnS{
@@ -191,5 +183,13 @@ schedule-card{
     .icon{
         width: 24px;
         height: 24px;
+    }
+    /* Course more info page | styles */
+    .pageTitle{
+        font-family: 'Nunito', sans-serif;
+        font-size: 1em;
+        font-weight: 600;
+        align-items: center;
+        margin: 1vw 0;
     }
  }

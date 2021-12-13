@@ -7,6 +7,9 @@ class CourseInfo extends HTMLElement {
     // this.shadow = this.attachShadow({
     //     mode:"open"
     // });
+    // let params = new URLSearchParams(document.location.search);
+    // this.courseId = params.get("courseId"); // is the string "Jonathan"
+
     this.courseId = this.getAttribute("courseId");
     this.courseName = this.getAttribute("courseName"); 
     this.credit = this.getAttribute("credit");
@@ -25,19 +28,22 @@ class CourseInfo extends HTMLElement {
         if(result.length == 1){
          this.innerHTML=`
          <style>
+         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
             .card{
                 border-radius:7vw 7vw 0 7vw;
                 background-color: #ffffff;
-                padding: 4vw;
+                padding: 2vw 4vw;
                 margin-bottom: 1vh; 
-                justify-content: center;
             }
             .text{
+                width: 100%;
+                margin: auto;
                 display: inline-grid;
-                grid-template-columns: auto auto auto;
-                grid-auto-rows: minmax(auto, 6vh);
+                // grid-template-columns: repeat(3, 1fr);
+                // grid-auto-rows: minmax(auto, 6vh);
                 grid-column-gap: 1vw;
-                text-align: center;
+                align-items: center;
+                justify-content: space-between;
             }
             .icons{
                 margin: auto;
@@ -45,17 +51,18 @@ class CourseInfo extends HTMLElement {
             p{
                 text-align: center;
                 font-family: 'Nunito', sans-serif;
-                font-size: 0.85em;
+                font-size: 1em;
+                font-weight: 500;
             }
-            .pl{
+            .id{
                 grid-column: 1;
                 grid-row: 1;
             }
-            .pr{
+            .kr{
                 grid-column: 3;
                 grid-row: 1;
             }  
-            .pc{
+            .name{
                 grid-column: 2;
                 grid-row: 1;
             }   
@@ -95,9 +102,9 @@ class CourseInfo extends HTMLElement {
           <article class="card">
 
             <div class="text">
-                <p class="pl"><b>${this.courseId}</b></p>
-                <p class="pc"> | ${result[0].courseName} </p>
-                <p class="pr"> | ${result[0].credit}</p>
+                <p class="id"><b>${this.courseId}</b></p>
+                <p class="name"> | ${result[0].courseName} </p>
+                <p class="kr"> | ${result[0].credit}</p>
             </div>
           <hr>
             <div class = "subjMenu uk-grid icons">

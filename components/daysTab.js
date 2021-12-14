@@ -24,6 +24,7 @@ class DaysTab extends HTMLElement {
       this.shadowTab.innerHTML = `
 
         <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
             .daysMenu{
                 width: 100%;
                 height: auto;
@@ -69,6 +70,7 @@ class DaysTab extends HTMLElement {
                 border: 1px dotted #333;
                 border-radius: 1rem;
                 background-color: #F1F2F7;
+                font-family: 'Nunito', sans-serif;
             }     
 
             // switch tabs

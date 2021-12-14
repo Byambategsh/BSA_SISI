@@ -18,11 +18,11 @@ p, h5, label{
     /* font-family: 'M PLUS Rounded 1c', sans-serif; */
     font-family: 'Nunito', sans-serif;
     font-size: 0.9em;
-    color: #333;
+    color: #000033;
 }
 label{
     padding: 3vw;
-    text-shadow: 4px 2px 4px #e6e6ff;
+    /* text-shadow: 4px 2px 4px #e6e6ff; */
     font-size: 1em;
     font-weight: 600;
 }
@@ -91,7 +91,7 @@ schedule-card{
     grid-row: 4;
 } */
 .tabs:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     color:  #000099;
     font-weight: 600;
     transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -184,9 +184,11 @@ schedule-card{
         margin: 1vw 0;
     }
     .tab-contents{
+        height: 100%;
         overflow: scroll;
         margin: auto;
         padding: 0 3vw;
+        /* background-color:  #fff; */
     }
     .staticSection{
         position: sticky;

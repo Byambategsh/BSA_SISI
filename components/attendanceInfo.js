@@ -39,22 +39,23 @@ class AttendanceInfo extends HTMLElement {
                     text-align: center;
                     border: 1px dotted #c9c9db;  
                     font-family: 'Nunito', sans-serif;
-                    
                     margin-top: 1vh;
-                    border-radius: 1rem;
-                    background-color: white;
+                    // border-radius: 1rem;
+                    // background-color: white;
                 }
                 .attendance td{
                     width: 25%;
                     padding: 1vh;
-                    border-left: 1px dotted #E7E7F6;
+                    border-left: 2px dotted #E7E7F6;
                     font-size: 0.8em;  
                 }
                 th{
                   font-size: 0.9em;  
                   border-left: 1px dotted #E7E7F6;
                 }
-                
+                tr{
+                  height: 3vh;
+                }
                 // .attTable{
                 //     display: inline-grid;
                 //     grid-template-columns: 25% 20% 25% 20%;

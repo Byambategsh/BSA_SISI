@@ -21,7 +21,7 @@ class TimeList extends HTMLElement {
               float: right;
           }
           table{
-            width: 22vw;
+            width: 90px;
           }
     </style>
     

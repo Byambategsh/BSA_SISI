@@ -52,10 +52,12 @@ class AssignmentCard extends HTMLElement {
                 }             
                 h4{
                   margin-left: 3vw;
+                  color: #000033;
                 }
                 p{
                   font-size: 0.9em;
                   margin: auto;
+                  color: #00004d;
                 }
                 .subjName{
                     grid-column: 1/4;

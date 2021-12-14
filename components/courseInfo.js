@@ -30,8 +30,8 @@ class CourseInfo extends HTMLElement {
          <style>
          @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
             .card{
-                border-radius:7vw 7vw 0 7vw;
-                background-color: #ffffff;
+                border-radius:0 0 30px 30px;
+                background-color: #e6e6ff;
                 padding: 2vw 4vw;
                 margin-bottom: 1vh; 
             }
@@ -70,9 +70,12 @@ class CourseInfo extends HTMLElement {
             .subjIcon{
                 // width: 10vw;
                 // height: : 10vh;
-                border: 1px solid #E7E7F6;
+                border: 1px solid white;
                 border-radius: 50%;
                 padding: 2vw;
+            }
+            .subjIcon:hover{
+                background-color: white;
             }
               p{
                 //       display: inline;
@@ -94,7 +97,7 @@ class CourseInfo extends HTMLElement {
                 margin: auto;
               }
               hr{
-                border: 0.5px solid gray; //#E7E7F7
+                border: 0.5px solid #9999ff;
               }
            
           </style>
@@ -115,7 +118,7 @@ class CourseInfo extends HTMLElement {
                     <img src="Iconography/subjSchedule.svg"  alt="course all schedule" class="subjIcon">
                 </div>
                 <div class="uk-width-1-4">
-                    <img src="Iconography/poll.svg" alt="teams icon" class="subjIcon">
+                    <img src="Iconography/poll.svg" alt="санал асуулга" class="subjIcon">
                 </div>
                 <div class="uk-width-1-4">
                     <img src="Iconography/Microsoft_Teams-Logo.wine 1.png" alt="teams icon" class="subj">

@@ -3,12 +3,9 @@
 }
 
 body{
-    margin: auto;
-}
-
-.staticSection{
-    position: sticky;
-    margin-top: -2vh;
+    margin: 0;
+    padding: 0;
+    background-color:#F1F2F7;
 }
 
 a{
@@ -24,33 +21,15 @@ p, h5, label{
     color: #333;
 }
 label{
-    display: inline;
     padding: 3vw;
     text-shadow: 4px 2px 4px #e6e6ff;
     font-size: 1em;
-}
-.active{
-    transform: scale(1.2);
-    color:  #000099;
     font-weight: 600;
-    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
+}
 
-/* label:hover::after{
-    content: " ";
-    display: block;
-    color: #5f0ef7;
-    position: absolute;
-    width: 20%;
-    height: 1px;
-    background-color:#3d16e9;
-    background-position: center;
-    margin-left: 3vw;
- } */
-
+/* Switch tab contents */
 .tab{
     display:none;
-    overflow-x: ;
 }
 .tab + .tab-content{
     display:none;
@@ -62,18 +41,15 @@ label{
     animation-duration: 1s;
     opacity: 1;
 }
+
 /* Animation for switch tabs */
 @keyframes courseTextClick{
     0% {opacity:0;}
     100% {opacity:1;}
 }
 /* Schedule tab, grid*/
-.perDay{
-    display: flex;
-    margin-top: 1vh;
-    overflow: scroll;
-}
-.daySchedules{
+
+/* .daySchedules{
     display: grid;
     margin-left: 3vw;
     width: 100%;
@@ -83,11 +59,12 @@ label{
     grid-row-gap: 1vh;
     background-color: rgb(147, 189, 69);
     border-radius: 2vw;
-}
-time-list{
+} */
+
+/* time-list{
     grid-column: 1;
     grid-row: 1/17;
-}
+} */
 
 /* Schedule tab grid container | repeat(3, 1fr)*/
 /* #schedule{
@@ -113,35 +90,53 @@ schedule-card{
     grid-column: 2/4;
     grid-row: 4;
 } */
+.tabs:hover{
+    transform: scale(1.2);
+    color:  #000099;
+    font-weight: 600;
+    transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+/* label:hover::after{
+    content: " ";
+    display: block;
+    color: #5f0ef7;
+    position: absolute;
+    width: 20%;
+    height: 1px;
+    background-color:#3d16e9;
+    background-position: center;
+    margin-left: 3vw;
+ } */
 /* Responsive | CSS for Mobile screen */
  @media screen and (max-width: 410px){
-    body{
-        margin: 0;
-        padding: 0;
-        background-color:#F1F2F7;
-    }
+   body{
+       margin: auto;
+       overflow: hidden;
+   }
     main{
         width: 100%;
+        height: 100%;
         margin: 1vh auto;
     }
     .calendar{
         margin: 4vw;
         height: auto;
-        /* border: 1px dotted gray; */
+    }
+    .tabMenu{
+        width: 100%;
+        height: auto;
+        display: flex;
+        padding: 2vw;
     }
     .SnS{
-        height: auto;
-        padding: 3vw;
+        padding: 2vw;
         background-color: rgb(255, 255, 255);
         border-radius: 40px 40px 0 0;
         box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
-        /* overflow: scroll; */
+        /* margin-bottom: 56px; */
     }
-    .dynamicSection{
-        overflow: scroll;
-        /* background-color: #E7E7F6; */
-        padding: 2vw;
-    }
+    
     .notif{
         float: right;
     }
@@ -153,14 +148,13 @@ schedule-card{
         height: auto;
         position: fixed;
         bottom: 0;
-        /* justify-content: center; */
     }
-
     #profile{
         width: 32px;
         height: 32px;
         border-radius: 5vw 5vw 5vw 0vw;
-        border: 1px solid #D0CDCD;
+        border: 2px solid #D0CDCD;
+        box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
     }
 
     /* components */
@@ -168,8 +162,6 @@ schedule-card{
         border-top: 0.1px #E7E7F6;
         opacity: 0.1;
     }
-
-    /* course info component */
 
     .pl{
         display: inline;
@@ -186,10 +178,18 @@ schedule-card{
     }
     /* Course more info page | styles */
     .pageTitle{
-        font-family: 'Nunito', sans-serif;
         font-size: 1em;
         font-weight: 600;
         align-items: center;
         margin: 1vw 0;
+    }
+    .tab-contents{
+        overflow: scroll;
+        margin: auto;
+        padding: 0 3vw;
+    }
+    .staticSection{
+        position: sticky;
+        margin-top: -2vh;
     }
  }

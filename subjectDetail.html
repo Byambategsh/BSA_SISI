@@ -3,28 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Хичээлийн дэлгэрэнгүй</title>
-
-        <!-- <link href="/open-iconic/font/css/open-iconic-foundation.css" rel="stylesheet"> -->
+        <title>Course info</title>
         <link rel="stylesheet"  href="css/style.css"/>
         <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
         <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
-        <style>
-            /* li{
-                display: inline-block;
-            }
-            li a{
-                text-decoration: none;
-            }
-            ul {
-                list-style: none; 
-                padding: 3vw;  
-                background-color: antiquewhite; 
-            }
-            ul li:not(:first-child){
-                padding-left: 5vw;
-            } */
-        </style>
     </head>
     <body>
         <header>
@@ -34,56 +16,47 @@
         </header>
         <main>
             <section class="staticSection">
-                 <p class="pageTitle">Судалж буй хичээлүүд</p>
-                <article class="subjectInfo">
+                <p class="pageTitle">Судалж буй хичээлүүд</p>
+                <article class="courseInfo">
                     <course-info courseId = "ICSI202"></course-info>                
                     <!-- <course-detail courseId = "ICSI304"></course-detail> -->
                 </article>
-                
-            </section>
-            <section class="dynamicSection">
-                <!-- <article class="middleTabs"> -->
+                <article class="tabMenu">
                     <label for="assignment" class="tabs active">Даалгавар</label>
                     <label for="attendance" class="tabs">Ирц</label>
                     <label for="points" class="tabs">Оноо</label>
-                <!-- </article> -->
-                <div class="tab-contents">
-                    <!-- tab1 -->
-                    <input type="radio" value="a1" id="assignment" name="a" class="tab" checked="checked">
-                    <!-- <div class="tab-content">tab1 content</div> -->
-                    <article slot="tab-content" id="assignment" class="tab-content">
-                        <!-- <script>
-                            for (let i = 0; i < result.length; i++) {
-                                <sem-subject result[0].courseId = "ICSI304"></sem-subject>
-                            }
-                        </script> -->
+                </article>
+            </section>
+                
+            <section class="tab-contents">
+                <!-- Assignment tab -->
+                <input type="radio" value="a1" id="assignment" name="a" class="tab" checked="checked">
+                <!-- <div class="tab-content">tab1 content</div> -->
+                    <article slot="tab-content" id="assignment" class="tab-content">                   
                         <assignment-card courseId = "ICSI202"></assignment-card>
-                        <!-- <assignment-list></assignment-list>    -->
-                        <!-- <assignment-list dugaar = "3"></assignment-list>  -->
-                       
+                        <!-- <assignment-list></assignment-list>    -->                      
                     </article>
-     
-                    <!-- tab2 -->
-                    <input type="radio" value="a2" id="attendance" name="a" class="tab">
-                    <!-- <div class="tab-content">tab2 content</div> -->
+    
+                <!-- Attendance tab -->
+                <input type="radio" value="a2" id="attendance" name="a" class="tab">
+                <!-- <div class="tab-content">tab2 content</div> -->
                     <article slot="tab-content" id="schedule" class="tab-content">
                         <attendance-info courseId = "ICSI202"></attendance-info>                       
                     </article>
 
-                    <input type="radio" value="a2" id="points" name="a" class="tab">
-                    <!-- <div class="tab-content">tab2 content</div> -->
+                <!-- Points tab -->
+                <input type="radio" value="a2" id="points" name="a" class="tab">
+                <!-- <div class="tab-content">tab2 content</div> -->
                     <article slot="tab-content" id="schedule" class="tab-content">
                         <assignment-card dugaar = "1"></assignment-card>   
                     </article>
-                 </div>
             </section>
         </main>
         
         <footer>
             <bottom-menu></bottom-menu>
-            
         </footer>
-
+        <!-- Components -->
         <script src="components/subject.js" type="module"></script>
         <script src="components/tabs.js" type="module"></script>
         <script src="components/bottomMenu.js" type="module"></script>

@@ -1,110 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>МУИС~SISi</title>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>МУИС~SISi</title>
 
-    <!-- CSS file and frameworks -->
-    <link rel="stylesheet"  href="css/style.css"/>
+      <!-- CSS file and frameworks -->
+      <link rel="stylesheet"  href="css/style.css"/>
 
-    <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
+      <link rel="stylesheet" href="frameworks/css/uikit.min.css"/>
 
-    <!-- <link href="/open-iconic/font/css/open-iconic.css" rel="stylesheet"> -->
+      <!-- Icon libs -->
+      <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+      
+      
+      <!-- Font style-->
+      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+      
+      <!-- calendar-lib -->
+      <link href="frameworks/week-calendar/css/mobiscroll.javascript.min.css" rel="stylesheet" />
+      <script src="frameworks/week-calendar/js/mobiscroll.javascript.min.js"></script>
+   </head>
 
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    
-    <!-- Font style-->
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap" rel="stylesheet">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
-    
+   <body>
+      <!-- <script src="components/script.js"></script> -->
+      <!-- <script src="components/app.js"></script> -->
+      <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
+   
+      <header>
+         <a href="#">
+            <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
+         </a>
+         <a href="#"></a>
+            <img src="Iconography/bell.png"  alt="notification icon" class="notif"> 
+         </a>
+      </header>
 
-    <!-- Rounded corner font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- calendar-lib -->
-    <link href="frameworks/week-calendar/css/mobiscroll.javascript.min.css" rel="stylesheet" />
-    <script src="frameworks/week-calendar/js/mobiscroll.javascript.min.js"></script>
+      <!-- Main content -->
+      <main>
+         <section class="calendar" >
+                  <!-- <plan-calendar></plan-calendar> -->
+               <!-- <event-calendar></event-calendar> -->
+               <div id="demo-2-weeks"></div>
+               <!-- <div id="demo-marked"></div> -->     
+         </section>
 
-</head>
-<body>
-   <script src="components/app.js"></script>
-   <script src="components/script.js"></script>
-   <script src="https://kit.fontawesome.com/a80905107e.js" crossorigin="anonymous"></script>
-  
-   <header>
-      <a href="#">
-         <img id="profile" src="https://thumbs.dreamstime.com/b/portrait-new-generation-young-business-woman-charming-busine-portrait-new-generation-young-business-woman-charming-124765960.jpg" alt="student profile img">
-      </a>
-      <a href="#"></a>
-         <img src="Iconography/bell.png"  alt="teams icon" class="icon notif"> 
-      </a>
-   </header>
+         <section class="SnS">
+               <div class="tabMenu">
+                  <label for="subject" class="tabs active">Хичээл</label>
+                  <label for="schedule" class="tabs">Хуваарь</label>
+               </div>
 
-     <!-- Main content -->
-   <main>
-        <section class="calendar" >
-               <!-- <plan-calendar></plan-calendar> -->
-             <!-- <event-calendar></event-calendar> -->
-             <div id="demo-2-weeks"></div>
-             <!-- <div id="demo-marked"></div> -->     
-        </section>
+               <div class="tab-contents">
+                  <!-- subject tab -->
+                  <input type="radio" value="a1" id="subject" name="a" class="tab" checked="checked">
+                     <article id="subject" class="tab-content">
+                        <!-- course list -->
+                        <courses-list></courses-list>
+                     </article>
 
-        <section class="SnS">
+                  <!-- schedule tab -->
+                  <input type="radio" value="a2" id="schedule" name="a" class="tab">
+                     <article id="schedule" class="tab-content">
+                           <!-- weekly schedule -->
+                           <days-tab></days-tab>   
+                     </article>
+               </div>
+         </section>
+      </main>
 
-            <label for="subject" class="tabs active">Хичээл</label>
-            <label for="schedule" class="tabs">Хуваарь</label>
-
-            <div class="tab-contents">
-
-               <!-- subject tab -->
-               <input type="radio" value="a1" id="subject" name="a" class="tab" checked="checked">
-               
-               <article slot="tab-content" id="subject" class="tab-content">
-                  <!-- <script>
-                     for (let i = 0; i < result.length; i++) {
-                        <sem-subject result[0].courseId = "ICSI304"></sem-subject>
-                     }
-                  </script> -->
-                  <courses-list></courses-list>
-                  <!-- <sem-subject courseId = "ICSI202" actionLink=""></sem-subject>
-                  <sem-subject courseId = "ICSI304"></sem-subject>
-                  <sem-subject courseId = "ICSI403"></sem-subject>
-                  <sem-subject courseId = "THES401"></sem-subject>
-                  <sem-subject courseId = "JOUR421"></sem-subject>         -->
-               </article>
-
-               <!-- schedule tab -->
-               <input type="radio" value="a2" id="schedule" name="a" class="tab">
-               
-               <article slot="tab-content" id="schedule" class="tab-content">
-                     <days-tab></days-tab>   
-               </article>
-            </div>
-        </section>
-     </main>
-
-     <!-- Bottom Menu -->
-     <footer>
-        
-        <bottom-menu></bottom-menu>
-      </footer>
+      <!-- Bottom Menu -->
+      <footer> 
+         <bottom-menu></bottom-menu>
+         </footer>
 
       <!-- import web components -->
-     <script src="components/subject.js" type="module"></script>
-     <script src="components/tabs.js" type="module"></script>
-     <script src="components/bottomMenu.js" type="module"></script>
-     <script src="components/courseInfo.js" type="module"></script>
-     <script src="components/subTabs.js" type="module"></script>
-     <script src="components/scheduleCard.js" type="module"></script>
-
-     <script src="components/assignmentCard.js" type="module"></script>
-     <script src="components/daysTab.js" type="module"></script>
-     <script src="components/timeList.js" type="module"></script>
-     <script src="components/calendar.js" type="module"></script>
-     <script src="components/profile.js" type="module"></script>
-     <script src="components/coursesList.js" type="module"></script>
-     <script src="components/app.js" type="module"></script>
-</body>
+      <script src="components/subject.js" type="module"></script>
+      <script src="components/tabs.js" type="module"></script>
+      <script src="components/bottomMenu.js" type="module"></script>
+      <script src="components/courseInfo.js" type="module"></script>
+      <script src="components/subTabs.js" type="module"></script>
+      <script src="components/scheduleCard.js" type="module"></script>
+      <script src="components/assignmentCard.js" type="module"></script>
+      <script src="components/daysTab.js" type="module"></script>
+      <script src="components/timeList.js" type="module"></script>
+      <script src="components/calendar.js" type="module"></script>
+      <script src="components/profile.js" type="module"></script>
+      <script src="components/coursesList.js" type="module"></script>
+      <script src="components/app.js" type="module"></script>
+   </body>
 </html>

@@ -30,10 +30,9 @@ class Subject extends HTMLElement{
                 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
                     .subject_card {
-                        margin: 1vw;
+                        margin: auto;
                         padding: 2vw;
                         height: auto;
-                        //border: solid 1px;
                         text-align: left;  
                     }
                     .circle_badge {
@@ -49,13 +48,11 @@ class Subject extends HTMLElement{
                     }     
                    
                     h4{
-                        // font-family: 'M PLUS Rounded 1c', sans-serif;
                         font-family: 'Nunito', sans-serif;
                         font-size: 0.9em;
                         margin: 1vh;
                         padding-top:5%;
-                        color:  #000033
-                        
+                        color:  #000033   
                     }
                     p{
                         color: white;

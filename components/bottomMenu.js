@@ -21,7 +21,6 @@ class BottomMenu extends HTMLElement {
               border-radius: 4vw 4vw 0 0; 
               z-index: 1;
               box-shadow: 1px 1px 8px #000066, 0 0 8px #e6e6ff;
-              margin-top: 1vh;
             }
 
             i{
@@ -39,9 +38,10 @@ class BottomMenu extends HTMLElement {
               filter: invert(9%) sepia(98%) saturate(6266%) hue-rotate(246deg) brightness(54%) contrast(126%);
             }
 
-             i:hover::after
-           {
+              i:hover::after
+              {
               transform: scaleY(1.2);
+              transition: all .4s cubic-bezier(0.075, 0.82, 0.165, 1);
               content: " ";
               display: block;
               width: 1vw;
@@ -87,7 +87,7 @@ class BottomMenu extends HTMLElement {
         </style>
                
          <div class="mainMenu">
-            <i class="menu1 menu_active">
+            <i class="menu1 active">
               <a href="index.html">
                 <img src="Iconography/home.png" alt="" class="icon">
               </a>
@@ -115,12 +115,14 @@ class BottomMenu extends HTMLElement {
          </div>
     `;
   }
+
   disconnectedCallback() {
     
   }
   attributeChangedCallback(attrName, oldVal, newVal) {
     
   }
+  
 }
 
 window.customElements.define('bottom-menu', BottomMenu);
